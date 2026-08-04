@@ -1,0 +1,4186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Serenity Massage | Body & Combo Massage in Santee, CA</title>
+
+  <meta
+    name="description"
+    content="Serenity Massage offers body massage and body-and-foot combo massage in a quiet, private setting at 10769 Woodside Ave #106, Santee, California."
+  />
+
+  <meta name="theme-color" content="#10251f" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* =========================================================
+       1. DESIGN TOKENS & RESET
+    ========================================================= */
+
+    :root {
+      --ink: #0b1714;
+      --forest: #10251f;
+      --forest-soft: #17372e;
+      --forest-light: #275144;
+      --ivory: #f8f4ec;
+      --cream: #efe7d9;
+      --champagne: #d8bd86;
+      --gold: #c8a96b;
+      --gold-light: #ead8af;
+      --warm-white: #fffdf8;
+      --muted: #69716d;
+      --line: rgba(25, 55, 46, 0.14);
+      --white-line: rgba(255, 255, 255, 0.15);
+      --shadow: 0 24px 70px rgba(8, 25, 20, 0.13);
+      --shadow-soft: 0 16px 40px rgba(8, 25, 20, 0.08);
+      --radius-xl: 34px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --container: 1220px;
+      --header-height: 82px;
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --sans: "Manrope", Arial, sans-serif;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 96px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(
+          circle at 15% 5%,
+          rgba(216, 189, 134, 0.12),
+          transparent 27rem
+        ),
+        var(--warm-white);
+      font-family: var(--sans);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button:focus-visible,
+    a:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid rgba(216, 189, 134, 0.85);
+      outline-offset: 4px;
+    }
+
+    section {
+      position: relative;
+    }
+
+    .container {
+      width: min(calc(100% - 40px), var(--container));
+      margin-inline: auto;
+    }
+
+    .section-space {
+      padding: clamp(76px, 9vw, 132px) 0;
+    }
+
+    .section-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      color: var(--gold);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .section-kicker::before {
+      width: 42px;
+      height: 1px;
+      background: currentColor;
+      content: "";
+    }
+
+    .section-title {
+      max-width: 800px;
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(2.75rem, 5.8vw, 5.4rem);
+      font-weight: 600;
+      letter-spacing: -0.035em;
+      line-height: 0.95;
+    }
+
+    .section-intro {
+      max-width: 680px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: clamp(0.98rem, 1.2vw, 1.1rem);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold-light);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 38px;
+      height: 1px;
+      background: currentColor;
+      content: "";
+    }
+
+    .button {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      padding: 13px 24px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      transition:
+        transform 240ms ease,
+        background 240ms ease,
+        color 240ms ease,
+        border-color 240ms ease,
+        box-shadow 240ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      color: var(--forest);
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      box-shadow: 0 14px 34px rgba(200, 169, 107, 0.28);
+    }
+
+    .button-primary:hover {
+      box-shadow: 0 18px 44px rgba(200, 169, 107, 0.38);
+    }
+
+    .button-outline {
+      color: var(--warm-white);
+      border-color: rgba(255, 255, 255, 0.42);
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+    }
+
+    .button-outline:hover {
+      border-color: var(--gold-light);
+      background: rgba(216, 189, 134, 0.12);
+    }
+
+    .button-dark {
+      color: var(--warm-white);
+      background: var(--forest);
+    }
+
+    .button-dark:hover {
+      background: var(--forest-light);
+    }
+
+    .button svg {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+    }
+
+    .image-fallback {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(216, 189, 134, 0.22),
+          rgba(16, 37, 31, 0.92)
+        ),
+        var(--forest);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition:
+        opacity 800ms cubic-bezier(0.2, 0.75, 0.25, 1),
+        transform 800ms cubic-bezier(0.2, 0.75, 0.25, 1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================================================
+       2. HEADER
+    ========================================================= */
+
+    .site-header {
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      color: var(--warm-white);
+      transition:
+        background 300ms ease,
+        box-shadow 300ms ease,
+        border-color 300ms ease;
+    }
+
+    .site-header.is-scrolled {
+      border-bottom: 1px solid rgba(216, 189, 134, 0.18);
+      background: rgba(11, 28, 23, 0.93);
+      box-shadow: 0 12px 38px rgba(0, 0, 0, 0.14);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-wrap {
+      min-height: var(--header-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 13px;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      position: relative;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(234, 216, 175, 0.54);
+      border-radius: 50%;
+    }
+
+    .brand-mark::before,
+    .brand-mark::after {
+      position: absolute;
+      width: 12px;
+      height: 22px;
+      border: 1px solid var(--gold-light);
+      border-radius: 100% 0 100% 0;
+      content: "";
+      transform: rotate(45deg);
+    }
+
+    .brand-mark::after {
+      transform: rotate(225deg);
+    }
+
+    .brand-name {
+      display: block;
+      font-family: var(--serif);
+      font-size: 1.52rem;
+      font-weight: 600;
+      letter-spacing: 0.015em;
+      line-height: 1;
+    }
+
+    .brand-subtitle {
+      display: block;
+      margin-top: 5px;
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 0.59rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(18px, 2vw, 30px);
+    }
+
+    .desktop-nav a:not(.nav-call) {
+      position: relative;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .desktop-nav a:not(.nav-call)::after {
+      position: absolute;
+      right: 0;
+      bottom: -9px;
+      left: 0;
+      height: 1px;
+      background: var(--gold-light);
+      content: "";
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 220ms ease;
+    }
+
+    .desktop-nav a:hover::after,
+    .desktop-nav a.is-active::after {
+      transform: scaleX(1);
+    }
+
+    .desktop-nav a:hover,
+    .desktop-nav a.is-active {
+      color: var(--warm-white);
+    }
+
+    .nav-call {
+      min-height: 42px;
+      padding: 10px 18px;
+      color: var(--forest);
+      border-radius: 999px;
+      background: var(--gold-light);
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .menu-button {
+      width: 46px;
+      height: 46px;
+      display: none;
+      place-items: center;
+      padding: 0;
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.06);
+      cursor: pointer;
+    }
+
+    .menu-button-lines {
+      width: 19px;
+      height: 14px;
+      position: relative;
+    }
+
+    .menu-button-lines span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: currentColor;
+      transition:
+        transform 240ms ease,
+        top 240ms ease,
+        opacity 240ms ease;
+    }
+
+    .menu-button-lines span:first-child {
+      top: 2px;
+    }
+
+    .menu-button-lines span:last-child {
+      top: 11px;
+    }
+
+    .menu-button[aria-expanded="true"] span:first-child {
+      top: 7px;
+      transform: rotate(45deg);
+    }
+
+    .menu-button[aria-expanded="true"] span:last-child {
+      top: 7px;
+      transform: rotate(-45deg);
+    }
+
+    .mobile-menu {
+      position: fixed;
+      z-index: 990;
+      inset: 0;
+      display: none;
+      padding: 112px 22px 36px;
+      background:
+        radial-gradient(
+          circle at 85% 18%,
+          rgba(216, 189, 134, 0.2),
+          transparent 22rem
+        ),
+        var(--forest);
+      opacity: 0;
+      visibility: hidden;
+      transition:
+        opacity 260ms ease,
+        visibility 260ms ease;
+    }
+
+    .mobile-menu.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-menu-inner {
+      width: min(100%, 560px);
+      height: 100%;
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .mobile-menu nav {
+      display: grid;
+      gap: 8px;
+    }
+
+    .mobile-menu nav a {
+      padding: 11px 0;
+      color: var(--warm-white);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+      font-family: var(--serif);
+      font-size: clamp(2rem, 9vw, 3.35rem);
+      line-height: 1;
+    }
+
+    .mobile-menu .button {
+      margin-top: 32px;
+    }
+
+    /* =========================================================
+       3. HERO
+    ========================================================= */
+
+    .hero {
+      min-height: 100svh;
+      display: grid;
+      align-items: end;
+      isolation: isolate;
+      overflow: hidden;
+      color: var(--warm-white);
+      background: var(--forest);
+    }
+
+    .hero-slides,
+    .hero-slide,
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-slides {
+      z-index: -3;
+    }
+
+    .hero-slide {
+      background-position: center;
+      background-size: cover;
+      opacity: 0;
+      transform: scale(1.05);
+      transition:
+        opacity 1.5s ease,
+        transform 8s ease;
+    }
+
+    .hero-slide.is-active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .hero-overlay {
+      z-index: -2;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(5, 18, 14, 0.92) 0%,
+          rgba(5, 18, 14, 0.66) 46%,
+          rgba(5, 18, 14, 0.24) 80%
+        ),
+        linear-gradient(
+          0deg,
+          rgba(5, 18, 14, 0.86) 0%,
+          transparent 50%
+        ),
+        radial-gradient(
+          circle at 78% 28%,
+          rgba(216, 189, 134, 0.16),
+          transparent 26rem
+        );
+    }
+
+    .hero-noise {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.18;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
+    }
+
+    .hero-content {
+      padding-top: calc(var(--header-height) + 70px);
+      padding-bottom: clamp(58px, 8vw, 98px);
+    }
+
+    .hero-copy {
+      max-width: 880px;
+    }
+
+    .hero h1 {
+      max-width: 880px;
+      margin: 20px 0 26px;
+      font-family: var(--serif);
+      font-size: clamp(4rem, 9.6vw, 8.8rem);
+      font-weight: 600;
+      letter-spacing: -0.055em;
+      line-height: 0.82;
+    }
+
+    .hero h1 em {
+      display: block;
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+
+    .hero-copy > p {
+      max-width: 650px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: clamp(1rem, 1.45vw, 1.2rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 36px;
+    }
+
+    .hero-trust {
+      margin-top: clamp(48px, 7vw, 82px);
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .trust-item {
+      min-height: 92px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px clamp(12px, 2vw, 24px);
+      color: rgba(255, 255, 255, 0.8);
+      border-right: 1px solid rgba(255, 255, 255, 0.14);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .trust-item:last-child {
+      border-right: 0;
+    }
+
+    .trust-icon {
+      width: 37px;
+      height: 37px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      color: var(--gold-light);
+      border: 1px solid rgba(216, 189, 134, 0.46);
+      border-radius: 50%;
+    }
+
+    .trust-icon svg {
+      width: 17px;
+      height: 17px;
+    }
+
+    .hero-progress {
+      position: absolute;
+      right: 28px;
+      bottom: 26px;
+      display: flex;
+      gap: 8px;
+    }
+
+    .hero-dot {
+      width: 30px;
+      height: 2px;
+      padding: 0;
+      border: 0;
+      background: rgba(255, 255, 255, 0.35);
+      cursor: pointer;
+      transition:
+        width 240ms ease,
+        background 240ms ease;
+    }
+
+    .hero-dot.is-active {
+      width: 54px;
+      background: var(--gold-light);
+    }
+
+    /* =========================================================
+       4. INTRO STRIP
+    ========================================================= */
+
+    .intro-strip {
+      color: var(--warm-white);
+      background: var(--forest);
+      overflow: hidden;
+    }
+
+    .intro-strip::before {
+      position: absolute;
+      top: -200px;
+      right: -160px;
+      width: 460px;
+      height: 460px;
+      border: 1px solid rgba(216, 189, 134, 0.14);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .intro-grid {
+      min-height: 270px;
+      display: grid;
+      grid-template-columns: 0.85fr 1.25fr;
+      align-items: center;
+      gap: clamp(40px, 8vw, 120px);
+      padding-block: 58px;
+    }
+
+    .intro-label {
+      color: var(--gold-light);
+      font-size: 0.73rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .intro-statement {
+      margin: 10px 0 0;
+      font-family: var(--serif);
+      font-size: clamp(2.15rem, 4vw, 4rem);
+      line-height: 1.02;
+    }
+
+    .intro-text {
+      max-width: 610px;
+      color: rgba(255, 255, 255, 0.67);
+    }
+
+    /* =========================================================
+       5. ABOUT
+    ========================================================= */
+
+    .about {
+      overflow: hidden;
+    }
+
+    .about::before {
+      position: absolute;
+      top: 12%;
+      left: -160px;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: rgba(216, 189, 134, 0.12);
+      filter: blur(20px);
+      content: "";
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+      align-items: center;
+      gap: clamp(52px, 8vw, 112px);
+    }
+
+    .about-collage {
+      min-height: 650px;
+      position: relative;
+    }
+
+    .about-image {
+      position: absolute;
+      overflow: hidden;
+      border-radius: var(--radius-xl);
+      background: var(--cream);
+      box-shadow: var(--shadow);
+    }
+
+    .about-image img {
+      height: 100%;
+      object-fit: cover;
+      transition: transform 900ms ease;
+    }
+
+    .about-image:hover img {
+      transform: scale(1.035);
+    }
+
+    .about-image-main {
+      inset: 0 18% 12% 0;
+    }
+
+    .about-image-accent {
+      right: 0;
+      bottom: 0;
+      width: 47%;
+      height: 45%;
+      border: 8px solid var(--warm-white);
+    }
+
+    .about-seal {
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      top: 48px;
+      right: 4%;
+      display: grid;
+      place-items: center;
+      padding: 22px;
+      color: var(--forest);
+      border: 1px solid rgba(16, 37, 31, 0.12);
+      border-radius: 50%;
+      background: rgba(248, 244, 236, 0.94);
+      box-shadow: var(--shadow-soft);
+      text-align: center;
+      backdrop-filter: blur(12px);
+    }
+
+    .about-seal strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 1.34rem;
+      line-height: 1;
+    }
+
+    .about-seal span {
+      display: block;
+      margin-top: 7px;
+      font-size: 0.58rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .about-copy .section-title {
+      max-width: 650px;
+    }
+
+    .about-copy > p {
+      margin: 26px 0 0;
+      color: var(--muted);
+    }
+
+    .about-features {
+      display: grid;
+      gap: 13px;
+      margin-top: 34px;
+    }
+
+    .about-feature {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 16px;
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .about-feature:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .feature-number {
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      font-weight: 600;
+    }
+
+    .about-feature h3 {
+      margin: 0 0 4px;
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      line-height: 1.1;
+    }
+
+    .about-feature p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* =========================================================
+       6. EXPERIENCE
+    ========================================================= */
+
+    .experience {
+      color: var(--warm-white);
+      background:
+        radial-gradient(
+          circle at 12% 18%,
+          rgba(216, 189, 134, 0.14),
+          transparent 26rem
+        ),
+        radial-gradient(
+          circle at 88% 82%,
+          rgba(39, 81, 68, 0.42),
+          transparent 26rem
+        ),
+        var(--forest);
+      overflow: hidden;
+    }
+
+    .experience .section-title {
+      color: var(--warm-white);
+    }
+
+    .experience .section-intro {
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    .experience-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .experience-head .section-intro {
+      max-width: 430px;
+      margin-bottom: 4px;
+    }
+
+    .experience-grid {
+      margin-top: 62px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border-top: 1px solid var(--white-line);
+      border-bottom: 1px solid var(--white-line);
+    }
+
+    .experience-card {
+      min-height: 390px;
+      position: relative;
+      padding: 36px 28px;
+      border-right: 1px solid var(--white-line);
+      overflow: hidden;
+    }
+
+    .experience-card:last-child {
+      border-right: 0;
+    }
+
+    .experience-card::before {
+      position: absolute;
+      inset: auto -30% -42% -30%;
+      height: 74%;
+      border-radius: 50%;
+      background: rgba(216, 189, 134, 0.07);
+      content: "";
+      transform: scale(0.7);
+      transition:
+        transform 500ms ease,
+        background 500ms ease;
+    }
+
+    .experience-card:hover::before {
+      background: rgba(216, 189, 134, 0.12);
+      transform: scale(1);
+    }
+
+    .experience-card-number {
+      color: var(--gold-light);
+      font-family: var(--serif);
+      font-size: 3.4rem;
+      line-height: 1;
+    }
+
+    .experience-card h3 {
+      margin: 104px 0 12px;
+      font-family: var(--serif);
+      font-size: 1.85rem;
+      font-weight: 600;
+      line-height: 1.05;
+    }
+
+    .experience-card p {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.61);
+      font-size: 0.9rem;
+    }
+
+    /* =========================================================
+       7. SERVICES & PRICING
+    ========================================================= */
+
+    .services {
+      background:
+        linear-gradient(
+          rgba(248, 244, 236, 0.89),
+          rgba(248, 244, 236, 0.89)
+        ),
+        radial-gradient(
+          circle at 20% 20%,
+          rgba(216, 189, 134, 0.25),
+          transparent 27rem
+        );
+    }
+
+    .services-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .price-note {
+      max-width: 360px;
+      padding-left: 20px;
+      color: var(--muted);
+      border-left: 1px solid var(--gold);
+      font-size: 0.83rem;
+    }
+
+    .walk-in-banner {
+      margin-top: 52px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto auto;
+      align-items: center;
+      gap: 28px;
+      padding: 24px 28px;
+      color: var(--warm-white);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(
+          110deg,
+          rgba(16, 37, 31, 0.98),
+          rgba(39, 81, 68, 0.94)
+        ),
+        var(--forest);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .walk-in-label {
+      color: var(--gold-light);
+      font-size: 0.67rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .walk-in-banner h3 {
+      margin: 5px 0 0;
+      font-family: var(--serif);
+      font-size: clamp(1.65rem, 3vw, 2.45rem);
+      line-height: 1;
+    }
+
+    .walk-in-hours {
+      color: var(--gold-light);
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3.6vw, 3rem);
+      font-weight: 600;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .service-grid {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    .service-card {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid rgba(16, 37, 31, 0.11);
+      border-radius: var(--radius-lg);
+      background: var(--warm-white);
+      box-shadow: 0 14px 40px rgba(11, 30, 24, 0.065);
+      transition:
+        transform 300ms ease,
+        box-shadow 300ms ease,
+        border-color 300ms ease;
+    }
+
+    .service-card:hover {
+      border-color: rgba(200, 169, 107, 0.5);
+      box-shadow: 0 24px 58px rgba(11, 30, 24, 0.12);
+      transform: translateY(-7px);
+    }
+
+    .service-carousel {
+      height: 340px;
+      position: relative;
+      overflow: hidden;
+      background: var(--forest-soft);
+    }
+
+    .service-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transform: scale(1.04);
+      transition:
+        opacity 900ms ease,
+        transform 5.5s ease;
+    }
+
+    .service-slide.is-active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .service-slide img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .service-type {
+      position: absolute;
+      z-index: 3;
+      top: 18px;
+      left: 18px;
+      padding: 8px 12px;
+      color: var(--forest);
+      border-radius: 999px;
+      background: rgba(255, 253, 248, 0.9);
+      font-size: 0.63rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      backdrop-filter: blur(10px);
+    }
+
+    .carousel-bars {
+      position: absolute;
+      z-index: 3;
+      right: 16px;
+      bottom: 15px;
+      left: 16px;
+      display: flex;
+      gap: 6px;
+    }
+
+    .carousel-bar {
+      height: 2px;
+      flex: 1;
+      border: 0;
+      background: rgba(255, 255, 255, 0.38);
+      transition: background 250ms ease;
+    }
+
+    .carousel-bar.is-active {
+      background: var(--gold-light);
+    }
+
+    .service-card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 30px 28px 28px;
+    }
+
+    .service-topline {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .service-card h3 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3vw, 2.75rem);
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .service-label {
+      flex-shrink: 0;
+      padding: 7px 10px;
+      color: var(--forest);
+      border: 1px solid rgba(200, 169, 107, 0.45);
+      border-radius: 999px;
+      background: rgba(216, 189, 134, 0.13);
+      font-size: 0.63rem;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .service-description {
+      margin: 20px 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .service-details {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 22px;
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .service-detail {
+      display: grid;
+      grid-template-columns: 85px 1fr;
+      gap: 12px;
+      font-size: 0.79rem;
+    }
+
+    .service-detail strong {
+      color: var(--forest);
+    }
+
+    .service-detail span {
+      color: var(--muted);
+    }
+
+    .pricing-list {
+      display: grid;
+      gap: 0;
+      margin-top: auto;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--ivory);
+    }
+
+    .pricing-row {
+      min-height: 66px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 18px;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .pricing-row:last-child {
+      border-bottom: 0;
+    }
+
+    .pricing-row span:first-child {
+      color: var(--forest);
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .pricing-row strong {
+      color: var(--forest);
+      font-family: var(--serif);
+      font-size: 1.7rem;
+      line-height: 1;
+    }
+
+    .service-call {
+      margin-top: 22px;
+    }
+
+    .service-call .button {
+      width: 100%;
+      min-height: 48px;
+    }
+
+    /* =========================================================
+       8. ATMOSPHERE GALLERY
+    ========================================================= */
+
+    .gallery {
+      background: var(--warm-white);
+      overflow: hidden;
+    }
+
+    .gallery-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .gallery-note {
+      max-width: 350px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .gallery-grid {
+      margin-top: 56px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.8fr;
+      grid-template-rows: 270px 270px;
+      gap: 16px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-md);
+      background: var(--cream);
+    }
+
+    .gallery-item:first-child {
+      grid-row: 1 / 3;
+    }
+
+    .gallery-item:nth-child(4) {
+      grid-column: 2 / 4;
+    }
+
+    .gallery-item img {
+      height: 100%;
+      object-fit: cover;
+      transition: transform 900ms cubic-bezier(0.2, 0.75, 0.25, 1);
+    }
+
+    .gallery-item::after {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        0deg,
+        rgba(7, 23, 18, 0.52),
+        transparent 52%
+      );
+      content: "";
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      z-index: 2;
+      right: 18px;
+      bottom: 16px;
+      left: 18px;
+      color: white;
+      font-family: var(--serif);
+      font-size: 1.25rem;
+    }
+
+    /* =========================================================
+       9. BOOKING
+    ========================================================= */
+
+    .booking {
+      color: var(--warm-white);
+      background:
+        radial-gradient(
+          circle at 12% 14%,
+          rgba(216, 189, 134, 0.14),
+          transparent 26rem
+        ),
+        var(--forest);
+    }
+
+    .booking-layout {
+      display: grid;
+      grid-template-columns: 0.86fr 1.14fr;
+      gap: clamp(38px, 7vw, 90px);
+      align-items: center;
+    }
+
+    .booking-copy h2 {
+      margin: 16px 0 22px;
+      font-family: var(--serif);
+      font-size: clamp(3rem, 6vw, 6rem);
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      line-height: 0.88;
+    }
+
+    .booking-copy > p {
+      max-width: 560px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    .booking-phone {
+      margin-top: 34px;
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      color: var(--gold-light);
+      font-family: var(--serif);
+      font-size: clamp(1.9rem, 4vw, 3.4rem);
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .booking-phone svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .booking-info {
+      margin-top: 34px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .booking-info-row {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 15px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.13);
+      font-size: 0.86rem;
+    }
+
+    .booking-info-row strong {
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      font-size: 0.68rem;
+    }
+
+    .booking-info-row span {
+      color: rgba(255, 255, 255, 0.73);
+    }
+
+    .booking-form {
+      padding: clamp(28px, 5vw, 50px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-xl);
+      background: rgba(255, 255, 255, 0.055);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .booking-form h3 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .booking-form > p {
+      margin: 12px 0 26px;
+      color: rgba(255, 255, 255, 0.58);
+      font-size: 0.86rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 17px;
+    }
+
+    .form-field {
+      display: grid;
+      gap: 8px;
+    }
+
+    .form-field.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-field label {
+      color: var(--gold-light);
+      font-size: 0.66rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      color: var(--warm-white);
+      border: 1px solid rgba(255, 255, 255, 0.17);
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.06);
+      outline: none;
+      transition:
+        border-color 220ms ease,
+        background 220ms ease;
+    }
+
+    .form-field input,
+    .form-field select {
+      min-height: 52px;
+      padding: 0 15px;
+    }
+
+    .form-field textarea {
+      min-height: 120px;
+      padding: 14px 15px;
+      resize: vertical;
+    }
+
+    .form-field input::placeholder,
+    .form-field textarea::placeholder {
+      color: rgba(255, 255, 255, 0.38);
+    }
+
+    .form-field select {
+      color-scheme: dark;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      border-color: var(--gold-light);
+      background: rgba(255, 255, 255, 0.09);
+    }
+
+    .booking-form .button {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .form-status {
+      min-height: 24px;
+      margin: 15px 0 0;
+      color: var(--gold-light);
+      font-size: 0.82rem;
+    }
+
+    /* =========================================================
+       10. REVIEWS
+    ========================================================= */
+
+    .reviews {
+      color: var(--warm-white);
+      background:
+        radial-gradient(
+          circle at 14% 20%,
+          rgba(216, 189, 134, 0.14),
+          transparent 26rem
+        ),
+        #0c1f19;
+      overflow: hidden;
+    }
+
+    .reviews .section-title {
+      color: white;
+    }
+
+    .reviews .section-intro {
+      color: rgba(255, 255, 255, 0.64);
+    }
+
+    .review-marquees {
+      margin-top: 58px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .review-row {
+      display: flex;
+      width: max-content;
+      gap: 18px;
+      will-change: transform;
+      animation: marquee-left 52s linear infinite;
+    }
+
+    .review-row.reverse {
+      animation-name: marquee-right;
+      animation-duration: 58s;
+    }
+
+    .review-marquees:hover .review-row {
+      animation-play-state: paused;
+    }
+
+    .review-card {
+      width: min(420px, 84vw);
+      min-height: 205px;
+      flex: 0 0 auto;
+      padding: 26px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.055);
+      backdrop-filter: blur(10px);
+    }
+
+    .review-stars {
+      color: var(--gold-light);
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+    }
+
+    .review-card blockquote {
+      margin: 17px 0 22px;
+      color: rgba(255, 255, 255, 0.77);
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      line-height: 1.35;
+    }
+
+    .review-author {
+      color: var(--gold-light);
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    @keyframes marquee-left {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(calc(-50% - 9px));
+      }
+    }
+
+    @keyframes marquee-right {
+      from {
+        transform: translateX(calc(-50% - 9px));
+      }
+
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    /* =========================================================
+       11. FAQ
+    ========================================================= */
+
+    .faq-layout {
+      display: grid;
+      grid-template-columns: 0.72fr 1.28fr;
+      gap: clamp(48px, 8vw, 120px);
+    }
+
+    .faq-intro {
+      position: sticky;
+      top: 120px;
+      align-self: start;
+    }
+
+    .faq-intro .section-title {
+      font-size: clamp(2.8rem, 5vw, 4.8rem);
+    }
+
+    .faq-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .faq-question {
+      width: 100%;
+      min-height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 20px 0;
+      color: var(--ink);
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      text-align: left;
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+    }
+
+    .faq-icon {
+      width: 38px;
+      height: 38px;
+      position: relative;
+      flex: 0 0 auto;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+    }
+
+    .faq-icon::before,
+    .faq-icon::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 14px;
+      height: 1px;
+      background: var(--forest);
+      content: "";
+      transform: translate(-50%, -50%);
+      transition: transform 250ms ease;
+    }
+
+    .faq-icon::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    .faq-question[aria-expanded="true"] .faq-icon::after {
+      transform: translate(-50%, -50%) rotate(0);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 350ms ease;
+    }
+
+    .faq-answer-inner {
+      max-width: 690px;
+      padding: 0 54px 28px 0;
+      color: var(--muted);
+    }
+
+    /* =========================================================
+       12. CONTACT
+    ========================================================= */
+
+    .contact {
+      color: var(--warm-white);
+      background: var(--forest);
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 0.78fr 1.22fr;
+      gap: 24px;
+    }
+
+    .contact-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: clamp(34px, 5vw, 58px);
+      border: 1px solid var(--white-line);
+      border-radius: var(--radius-lg);
+      background:
+        radial-gradient(
+          circle at 85% 10%,
+          rgba(216, 189, 134, 0.13),
+          transparent 18rem
+        ),
+        rgba(255, 255, 255, 0.03);
+    }
+
+    .contact-panel h2 {
+      margin: 16px 0 18px;
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      font-weight: 600;
+      line-height: 0.92;
+    }
+
+    .contact-panel > div > p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.64);
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 25px;
+      margin-top: 50px;
+    }
+
+    .contact-detail {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 15px;
+      align-items: start;
+    }
+
+    .contact-detail-icon {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      color: var(--gold-light);
+      border: 1px solid rgba(216, 189, 134, 0.35);
+      border-radius: 50%;
+    }
+
+    .contact-detail-icon svg {
+      width: 17px;
+      height: 17px;
+    }
+
+    .contact-detail strong {
+      display: block;
+      color: var(--gold-light);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .contact-detail span,
+    .contact-detail a {
+      display: block;
+      margin-top: 5px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 42px;
+    }
+
+    .map-wrap {
+      min-height: 650px;
+      overflow: hidden;
+      border: 1px solid var(--white-line);
+      border-radius: var(--radius-lg);
+      background: var(--forest-soft);
+    }
+
+    .map-wrap iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 650px;
+      display: block;
+      border: 0;
+      filter: saturate(0.72) contrast(1.04);
+    }
+
+    /* =========================================================
+       13. FOOTER
+    ========================================================= */
+
+    .site-footer {
+      color: var(--warm-white);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      background: #091a15;
+    }
+
+    .footer-main {
+      display: grid;
+      grid-template-columns: 1.15fr 0.65fr 0.8fr;
+      gap: 50px;
+      padding: 66px 0 52px;
+    }
+
+    .footer-brand .brand {
+      margin-bottom: 20px;
+    }
+
+    .footer-brand p {
+      max-width: 410px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.88rem;
+    }
+
+    .footer-column h3 {
+      margin: 0 0 20px;
+      color: var(--gold-light);
+      font-size: 0.68rem;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 10px;
+    }
+
+    .footer-links a,
+    .footer-column p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 0.86rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-bottom {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      color: rgba(255, 255, 255, 0.42);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.72rem;
+    }
+
+    .floating-call {
+      width: 58px;
+      height: 58px;
+      position: fixed;
+      z-index: 900;
+      right: 22px;
+      bottom: 22px;
+      display: grid;
+      place-items: center;
+      color: var(--forest);
+      border: 1px solid rgba(255, 255, 255, 0.58);
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      box-shadow: 0 14px 36px rgba(5, 18, 14, 0.32);
+      transition:
+        transform 220ms ease,
+        box-shadow 220ms ease;
+    }
+
+    .floating-call:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 18px 44px rgba(5, 18, 14, 0.4);
+    }
+
+    .floating-call svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    /* =========================================================
+       14. RESPONSIVE DESIGN
+    ========================================================= */
+
+    @media (max-width: 1100px) {
+      .desktop-nav {
+        gap: 16px;
+      }
+
+      .desktop-nav a:not(.nav-call) {
+        font-size: 0.69rem;
+      }
+
+      .about-grid {
+        gap: 58px;
+      }
+
+      .experience-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .experience-card:nth-child(2) {
+        border-right: 0;
+      }
+
+      .experience-card:nth-child(-n + 2) {
+        border-bottom: 1px solid var(--white-line);
+      }
+
+      .booking-layout {
+        grid-template-columns: 0.9fr 1.1fr;
+      }
+
+      .contact-layout {
+        grid-template-columns: 0.9fr 1.1fr;
+      }
+    }
+
+    @media (max-width: 900px) {
+      :root {
+        --header-height: 74px;
+      }
+
+      .desktop-nav {
+        display: none;
+      }
+
+      .menu-button {
+        display: grid;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .hero-overlay {
+        background:
+          linear-gradient(
+            90deg,
+            rgba(5, 18, 14, 0.9),
+            rgba(5, 18, 14, 0.52)
+          ),
+          linear-gradient(
+            0deg,
+            rgba(5, 18, 14, 0.86),
+            transparent 52%
+          );
+      }
+
+      .hero-trust {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .trust-item:nth-child(2) {
+        border-right: 0;
+      }
+
+      .trust-item:nth-child(-n + 2) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-collage {
+        min-height: 580px;
+      }
+
+      .experience-head,
+      .services-header,
+      .gallery-head {
+        display: block;
+      }
+
+      .experience-head .section-intro,
+      .price-note,
+      .gallery-note {
+        margin-top: 24px;
+      }
+
+      .price-note {
+        max-width: 520px;
+      }
+
+      .walk-in-banner {
+        grid-template-columns: 1fr auto;
+      }
+
+      .walk-in-banner .button {
+        grid-column: 1 / -1;
+        justify-self: start;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 360px 230px 260px;
+      }
+
+      .gallery-item:first-child {
+        grid-column: 1 / 3;
+        grid-row: auto;
+      }
+
+      .gallery-item:nth-child(4) {
+        grid-column: 1 / 3;
+      }
+
+      .booking-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .faq-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .faq-intro {
+        position: static;
+      }
+
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .map-wrap,
+      .map-wrap iframe {
+        min-height: 500px;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        width: min(calc(100% - 28px), var(--container));
+      }
+
+      .section-space {
+        padding: 78px 0;
+      }
+
+      .brand-mark {
+        width: 36px;
+        height: 36px;
+      }
+
+      .brand-name {
+        font-size: 1.3rem;
+      }
+
+      .brand-subtitle {
+        font-size: 0.52rem;
+      }
+
+      .hero-content {
+        padding-bottom: 34px;
+      }
+
+      .hero h1 {
+        font-size: clamp(3.7rem, 18vw, 5.4rem);
+      }
+
+      .hero-copy > p {
+        max-width: 94%;
+        font-size: 0.96rem;
+      }
+
+      .hero-actions {
+        display: grid;
+      }
+
+      .hero-actions .button {
+        width: 100%;
+      }
+
+      .hero-trust {
+        margin-top: 42px;
+      }
+
+      .trust-item {
+        min-height: 80px;
+        padding: 14px 10px;
+        font-size: 0.64rem;
+      }
+
+      .trust-icon {
+        width: 31px;
+        height: 31px;
+      }
+
+      .hero-progress {
+        display: none;
+      }
+
+      .about-collage {
+        min-height: 460px;
+      }
+
+      .about-image-main {
+        inset: 0 10% 10% 0;
+      }
+
+      .about-image-accent {
+        width: 46%;
+        height: 42%;
+        border-width: 5px;
+      }
+
+      .about-seal {
+        width: 118px;
+        height: 118px;
+        top: 25px;
+        right: 1%;
+        padding: 15px;
+      }
+
+      .about-seal strong {
+        font-size: 1.05rem;
+      }
+
+      .experience-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-card {
+        min-height: 270px;
+        border-right: 0;
+        border-bottom: 1px solid var(--white-line);
+      }
+
+      .experience-card:last-child {
+        border-bottom: 0;
+      }
+
+      .experience-card h3 {
+        margin-top: 58px;
+      }
+
+      .walk-in-banner {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 25px 22px;
+      }
+
+      .walk-in-banner .button {
+        grid-column: auto;
+        width: 100%;
+      }
+
+      .walk-in-hours {
+        white-space: normal;
+      }
+
+      .service-carousel {
+        height: 260px;
+      }
+
+      .service-card-body {
+        padding: 25px 20px 22px;
+      }
+
+      .service-topline {
+        display: grid;
+      }
+
+      .service-label {
+        justify-self: start;
+      }
+
+      .pricing-row {
+        padding: 13px 14px;
+      }
+
+      .pricing-row span:first-child {
+        font-size: 0.8rem;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 300px);
+      }
+
+      .gallery-item:first-child,
+      .gallery-item:nth-child(4) {
+        grid-column: auto;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-field.full {
+        grid-column: auto;
+      }
+
+      .booking-form {
+        padding: 28px 20px;
+      }
+
+      .booking-phone {
+        font-size: 1.75rem;
+      }
+
+      .booking-info-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .faq-answer-inner {
+        padding-right: 12px;
+      }
+
+      .contact-panel {
+        padding: 34px 23px;
+      }
+
+      .contact-actions {
+        display: grid;
+      }
+
+      .contact-actions .button {
+        width: 100%;
+      }
+
+      .map-wrap,
+      .map-wrap iframe {
+        min-height: 420px;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .footer-brand {
+        grid-column: auto;
+      }
+
+      .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 0;
+      }
+
+      .floating-call {
+        width: 54px;
+        height: 54px;
+        right: 15px;
+        bottom: 15px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 1ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- =======================================================
+       HEADER
+  ======================================================== -->
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Serenity Massage home">
+        <span class="brand-mark" aria-hidden="true"></span>
+
+        <span>
+          <span class="brand-name">Serenity Massage</span>
+          <span class="brand-subtitle">Santee, California</span>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#experience">Experience</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+
+        <a class="nav-call" href="tel:+16199051236">
+          Call to Book
+        </a>
+      </nav>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+        aria-label="Open navigation menu"
+      >
+        <span class="menu-button-lines" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+      <nav aria-label="Mobile navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#experience">Experience</a>
+        <a href="#booking">Booking</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="button button-primary" href="tel:+16199051236">
+        Call (619) 905-1236
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="hero" id="home" aria-labelledby="heroTitle">
+      <div class="hero-slides" aria-hidden="true">
+        <div
+          class="hero-slide is-active"
+          style="background-image: url('https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg');"
+        ></div>
+
+        <div
+          class="hero-slide"
+          style="background-image: url('https://i.pinimg.com/1200x/6a/df/fe/6adffe5706bdce88dd2d2d0fc6875398.jpg');"
+        ></div>
+
+        <div
+          class="hero-slide"
+          style="background-image: url('https://i.pinimg.com/736x/c0/e8/3f/c0e83fc3058518c785d6cfe1b15da601.jpg');"
+        ></div>
+
+        <div
+          class="hero-slide"
+          style="background-image: url('https://i.pinimg.com/1200x/71/a4/b7/71a4b75a19fbadf33bc6dc340e91340c.jpg');"
+        ></div>
+      </div>
+
+      <div class="hero-overlay"></div>
+      <div class="hero-noise"></div>
+
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <span class="eyebrow">
+            Body & Combo Massage in Santee
+          </span>
+
+          <h1 id="heroTitle">
+            Step away from
+            <em>the everyday.</em>
+          </h1>
+
+          <p>
+            Discover a quiet, private setting created for full-body relaxation,
+            soothing foot care and an unhurried break from the pace of the day.
+            Walk-ins are welcome, and we are open daily from 10:00 AM to 9:00 PM.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#booking">
+              Book Now
+            </a>
+
+            <a class="button button-outline" href="#services">
+              View Services & Pricing
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-trust" aria-label="Massage qualities">
+          <div class="trust-item">
+            <span class="trust-icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M12 3v18M4.2 7.5 19.8 16.5M4.2 16.5 19.8 7.5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </span>
+            Quiet Rooms
+          </div>
+
+          <div class="trust-item">
+            <span class="trust-icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M12 3 5 6v5c0 4.7 2.8 8.2 7 10 4.2-1.8 7-5.3 7-10V6l-7-3Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </span>
+            Private Atmosphere
+          </div>
+
+          <div class="trust-item">
+            <span class="trust-icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M4 15c4-1 7-4 8-10 4 3 6 7 5 11-1 4-5 6-9 4-2-1-3-3-4-5Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </span>
+            Clean Setting
+          </div>
+
+          <div class="trust-item">
+            <span class="trust-icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M7 4v3M17 4v3M5 9h14M6 6h12a2 2 0 0 1 2 2v11H4V8a2 2 0 0 1 2-2Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </span>
+            Walk-ins Welcome
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-progress" aria-label="Hero image navigation">
+        <button
+          class="hero-dot is-active"
+          type="button"
+          aria-label="Show hero image 1"
+        ></button>
+
+        <button
+          class="hero-dot"
+          type="button"
+          aria-label="Show hero image 2"
+        ></button>
+
+        <button
+          class="hero-dot"
+          type="button"
+          aria-label="Show hero image 3"
+        ></button>
+
+        <button
+          class="hero-dot"
+          type="button"
+          aria-label="Show hero image 4"
+        ></button>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         BRAND INTRO
+    ====================================================== -->
+
+    <section
+      class="intro-strip"
+      aria-label="Serenity Massage introduction"
+    >
+      <div class="container intro-grid">
+        <div class="reveal">
+          <span class="intro-label">Serenity Massage</span>
+
+          <p class="intro-statement">
+            A calm pause for body, feet and mind.
+          </p>
+        </div>
+
+        <p class="intro-text reveal">
+          Our space is designed to help you leave everyday distractions at the
+          door. A peaceful atmosphere, thoughtful presentation and simple
+          booking process make it easier to slow down and enjoy time devoted to
+          relaxation.
+        </p>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section
+      class="about section-space"
+      id="about"
+      aria-labelledby="aboutTitle"
+    >
+      <div class="container about-grid">
+        <div class="about-collage reveal">
+          <figure class="about-image about-image-main">
+            <img
+              src="https://i.pinimg.com/736x/4c/2b/cb/4c2bcb39fbc7189277e8e505c2e1bc8f.jpg"
+              alt="Calm and private body massage atmosphere"
+              loading="lazy"
+              onerror="this.parentElement.classList.add('image-fallback'); this.remove();"
+            />
+          </figure>
+
+          <figure class="about-image about-image-accent">
+            <img
+              src="https://i.pinimg.com/1200x/2b/85/42/2b8542fd0d099c9771bb5b332d6f51a9.jpg"
+              alt="Relaxing foot massage experience"
+              loading="lazy"
+              onerror="this.parentElement.classList.add('image-fallback'); this.remove();"
+            />
+          </figure>
+
+          <div class="about-seal" aria-hidden="true">
+            <div>
+              <strong>Open Daily</strong>
+              <span>10 AM–9 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-copy reveal">
+          <span class="section-kicker">About Our Space</span>
+
+          <h2 class="section-title" id="aboutTitle">
+            A quiet retreat for comfortable, unhurried relaxation.
+          </h2>
+
+          <p>
+            Serenity Massage welcomes guests into a peaceful environment where
+            privacy, cleanliness and comfort shape the entire visit. The space
+            is designed to feel calm and uncluttered, allowing you to step away
+            from daily demands and enjoy a more restful rhythm.
+          </p>
+
+          <p>
+            Whether you choose a body massage or a combination of body and foot
+            massage, the experience is kept simple and relaxed. Walk-ins are
+            welcome, or you may call ahead to confirm availability.
+          </p>
+
+          <div class="about-features">
+            <article class="about-feature">
+              <span class="feature-number">01</span>
+
+              <div>
+                <h3>Quiet, Private Atmosphere</h3>
+
+                <p>
+                  A comfortable setting that helps reduce distractions and
+                  creates space for personal relaxation.
+                </p>
+              </div>
+            </article>
+
+            <article class="about-feature">
+              <span class="feature-number">02</span>
+
+              <div>
+                <h3>Clean, Considered Surroundings</h3>
+
+                <p>
+                  An orderly and thoughtfully presented environment supports a
+                  more comfortable visit from arrival to departure.
+                </p>
+              </div>
+            </article>
+
+            <article class="about-feature">
+              <span class="feature-number">03</span>
+
+              <div>
+                <h3>Easy Arrival & Booking</h3>
+
+                <p>
+                  Walk in during business hours or call ahead to ask questions
+                  and reserve your preferred session.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         EXPERIENCE
+    ====================================================== -->
+
+    <section
+      class="experience section-space"
+      id="experience"
+      aria-labelledby="experienceTitle"
+    >
+      <div class="container">
+        <div class="experience-head">
+          <div class="reveal">
+            <span class="section-kicker">
+              The Serenity Experience
+            </span>
+
+            <h2 class="section-title" id="experienceTitle">
+              Every detail supports a more restful visit.
+            </h2>
+          </div>
+
+          <p class="section-intro reveal">
+            The experience is centered on comfort, privacy, cleanliness and a
+            gentle transition away from the pace of the outside world.
+          </p>
+        </div>
+
+        <div class="experience-grid">
+          <article class="experience-card reveal">
+            <span class="experience-card-number">01</span>
+
+            <h3>Calm Arrival</h3>
+
+            <p>
+              Enter a composed setting where the mood is welcoming, quiet and
+              free from unnecessary rush.
+            </p>
+          </article>
+
+          <article class="experience-card reveal">
+            <span class="experience-card-number">02</span>
+
+            <h3>Private Space</h3>
+
+            <p>
+              A discreet atmosphere helps your visit feel comfortable,
+              personal and protected from distraction.
+            </p>
+          </article>
+
+          <article class="experience-card reveal">
+            <span class="experience-card-number">03</span>
+
+            <h3>Mindful Details</h3>
+
+            <p>
+              Clean presentation, soft textures and an orderly flow create a
+              more polished relaxation experience.
+            </p>
+          </article>
+
+          <article class="experience-card reveal">
+            <span class="experience-card-number">04</span>
+
+            <h3>Restful Finish</h3>
+
+            <p>
+              Allow a little extra time afterward so the calm feeling of your
+              visit can continue into the rest of your day.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SERVICES & PRICING
+    ====================================================== -->
+
+    <section
+      class="services section-space"
+      id="services"
+      aria-labelledby="servicesTitle"
+    >
+      <div class="container">
+        <div class="services-header">
+          <div class="reveal">
+            <span class="section-kicker">Services & Pricing</span>
+
+            <h2 class="section-title" id="servicesTitle">
+              Choose the session that fits your day.
+            </h2>
+          </div>
+
+          <p class="price-note reveal">
+            Prices below reflect the provided Serenity Massage menu. Walk-ins
+            are welcome, and availability may also be confirmed by phone.
+          </p>
+        </div>
+
+        <article class="walk-in-banner reveal">
+          <div>
+            <span class="walk-in-label">Walk-ins Welcome</span>
+
+            <h3>Open Seven Days a Week</h3>
+          </div>
+
+          <div class="walk-in-hours">
+            10 AM–9 PM
+          </div>
+
+          <a class="button button-primary" href="tel:+16199051236">
+            Call to Reserve
+          </a>
+        </article>
+
+        <div class="service-grid">
+          <!-- BODY MASSAGE -->
+
+          <article class="service-card reveal">
+            <div class="service-carousel" data-carousel>
+              <span class="service-type">Body Massage</span>
+
+              <div class="service-slide is-active">
+                <img
+                  src="https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg"
+                  alt="Relaxing body massage experience"
+                  loading="lazy"
+                  onerror="this.parentElement.classList.add('image-fallback'); this.remove();"
+                />
+              </div>
+
+              <div class="service-slide">
+                <img
+                  src="https://i.pinimg.com/736x/4c/2b/cb/4c2bcb39fbc7189277e8e505c2e1bc8f.jpg"
+                  alt="Quiet full-body massage setting"
+                  loading="lazy"
+                  onerror="this.parentElement.classList.add('image-fallback'); this.remove();"
+                />
+              </div>
+
+              <div class="service-slide">
+                <img
+                  src="https://i.pinimg.com/736x/c0/e8/3f/c0e83fc3058518c785d6cfe1b15da601.jpg"
+                  alt="Comfortable bodywork in a private room"
+                  loading="lazy"
+                  onerror="this.parentElement.classList.add('image-fallback'); this.remove();"
+                />
+              </div>
+
+              <div class="service-slide">
+                <img
+                  src="https://i.pinimg.com/736x/21/8f/4c/218f4cd988ca278667bd28ff54a577ff.jpg"
+                  alt="Calm body massage atmosphere"
+                  loading="lazy"
+                  onerror="this.parentElement.classList.add('image-fallback'); this.remove();"
+                />
+              </div>
+
+              <div class="carousel-bars" aria-hidden="true">
+                <span class="carousel-bar is-active"></span>
+                <span class="carousel-bar"></span>
+                <span class="carousel-bar"></span>
+                <span class="carousel-bar"></span>
+              </div>
+            </div>
+
+            <div class="service-card-body">
+              <div class="service-topline">
+                <h3>Body Massage</h3>
+
+                <span class="service-label">
+                  30–120 Minutes
+                </span>
+              </div>
+
+              <p class="service-description">
+                A full-body relaxation session for guests who want time to
+                pause, unwind and step away from the physical demands of a busy
+                day. Choose a shorter visit or a longer, more unhurried session.
+              </p>
+
+              <div class="service-details">
+                <div class="service-detail">
+                  <strong>Ideal for</strong>
+
+                  <span>
+                    Long workdays, general body fatigue or quiet personal time
+                  </span>
+                </div>
+
+                <div class="service-detail">
+                  <strong>Experience</strong>
+
+                  <span>
+                    Calm, private and available in four session lengths
+                  </span>
+                </div>
+              </div>
+
+              <div class="pricing-list" aria-label="Body Massage pricing">
+                <div class="pricing-row">
+                  <span>30 Minutes</span>
+                  <strong>$40</strong>
+                </div>
+
+                <div class="pricing-row">
+                  <span>60 Minutes</span>
+                  <strong>$60</strong>
+                </div>
+
+                <div class="pricing-row">
+                  <span>90 Minutes</span>
+                  <strong>$90</strong>
+                </div>
+
+                <div class="pricing-row">
+                  <span>120 Minutes</span>
+                  <strong>$120</strong>
+                </div>
+              </div>
+
+              <div class="service-call">
+                <a class="button button-dark" href="tel:+16199051236">
+                  Call to Book
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- COMBO MASSAGE -->
+
+          <article class="service-card reveal">
+            <div class="service-carousel" data-carousel>
+              <span class="service-type">Body + Foot</span>
+
+              <div class="service-slide is-active">
+                <img
+                  src="https://i.pinimg.com/736x/86/47/ef/8647ef5b51553a8e57ca32e6b2ec74f0.jpg"
+                  alt="Relaxing body massage portion of a combo session"
+                  loading="lazy"
+                  onerror="this.parentElement.classList.add('image-fallback'); this.remove();"
+                />
+              </div>
+
+              <div class="service-slide">
+                <img
+                  src="https://i.pinimg.com/1200x/6a/df/fe/6adffe5706bdce88dd2d2d0fc6875398.jpg"
+                  alt="Foot massage portion of a body and foot combo"
+                  loading="lazy"
+                  onerror="this.parentElement.classList.add('image-fallback'); this.remove();"
+                />
+              </div>
+
+              <div class="service-slide">
+                <img
+                  src="https://i.pinimg.com/736x/f6/33/48/f6334826491861572c8e532a6a099cdc.jpg"
+                  alt="Calm bodywork setting for a combo massage"
+                  loading="lazy"
+                  onerror="this.parentElement.classList.add('image-fallback'); this.remove();"
+                />
+              </div>
+
+              <div class="service-slide">
+                <img
+                  src="https://i.pinimg.com/1200x/71/a4/b7/71a4b75a19fbadf33bc6dc340e91340c.jpg"
+                  alt="Relaxing foot care included in a combo massage"
+                  loading="lazy"
+                  onerror="this.parentElement.classList.add('image-fallback'); this.remove();"
+                />
+              </div>
+
+              <div class="carousel-bars" aria-hidden="true">
+                <span class="carousel-bar is-active"></span>
+                <span class="carousel-bar"></span>
+                <span class="carousel-bar"></span>
+                <span class="carousel-bar"></span>
+              </div>
+            </div>
+
+            <div class="service-card-body">
+              <div class="service-topline">
+                <h3>Combo Massage</h3>
+
+                <span class="service-label">
+                  Body + Foot
+                </span>
+              </div>
+
+              <p class="service-description">
+                A combined session that pairs body massage with 30 minutes of
+                dedicated foot massage. This option is suited to guests who want
+                a more complete relaxation experience in one visit.
+              </p>
+
+              <div class="service-details">
+                <div class="service-detail">
+                  <strong>Ideal for</strong>
+
+                  <span>
+                    Guests who want both full-body relaxation and focused foot care
+                  </span>
+                </div>
+
+                <div class="service-detail">
+                  <strong>Experience</strong>
+
+                  <span>
+                    Balanced, comfortable and available in three combinations
+                  </span>
+                </div>
+              </div>
+
+              <div class="pricing-list" aria-label="Combo Massage pricing">
+                <div class="pricing-row">
+                  <span>30 Min Body + 30 Min Foot</span>
+                  <strong>$60</strong>
+                </div>
+
+                <div class="pricing-row">
+                  <span>60 Min Body + 30 Min Foot</span>
+                  <strong>$90</strong>
+                </div>
+
+                <div class="pricing-row">
+                  <span>90 Min Body + 30 Min Foot</span>
+                  <strong>$120</strong>
+                </div>
+              </div>
+
+              <div class="service-call">
+                <a class="button button-dark" href="tel:+16199051236">
+                  Call to Book
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         GALLERY
+    ====================================================== -->
+
+    <section
+      class="gallery section-space"
+      aria-labelledby="galleryTitle"
+    >
+      <div class="container">
+        <div class="gallery-head">
+          <div class="reveal">
+            <span class="section-kicker">Atmosphere</span>
+
+            <h2 class="section-title" id="galleryTitle">
+              A softer setting for time devoted to you.
+            </h2>
+          </div>
+
+          <p class="gallery-note reveal">
+            Quiet visual textures, a private mood and thoughtful presentation
+            help each visit feel separate from the pace of the day.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item reveal">
+            <img
+              src="https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg"
+              alt="Calm body massage experience"
+              loading="lazy"
+              onerror="this.parentElement.classList.add('image-fallback'); this.remove();"
+            />
+
+            <figcaption class="gallery-caption">
+              Quietly restorative
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item reveal">
+            <img
+              src="https://i.pinimg.com/1200x/2b/85/42/2b8542fd0d099c9771bb5b332d6f51a9.jpg"
+              alt="Relaxing foot massage setting"
+              loading="lazy"
+              onerror="this.parentElement.classList.add('image-fallback'); this.remove();"
+            />
+
+            <figcaption class="gallery-caption">
+              Focused foot care
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item reveal">
+            <img
+              src="https://i.pinimg.com/736x/97/dc/96/97dc9699bc6c850ecd8776eaee3b7898.jpg"
+              alt="Private and peaceful massage environment"
+              loading="lazy"
+              onerror="this.parentElement.classList.add('image-fallback'); this.remove();"
+            />
+
+            <figcaption class="gallery-caption">
+              Private comfort
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item reveal">
+            <img
+              src="https://i.pinimg.com/736x/76/48/7c/76487c07076e4b41fcce7c4ea35e2005.jpg"
+              alt="Comfortable foot massage experience"
+              loading="lazy"
+              onerror="this.parentElement.classList.add('image-fallback'); this.remove();"
+            />
+
+            <figcaption class="gallery-caption">
+              A more complete pause
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         BOOKING
+    ====================================================== -->
+
+    <section
+      class="booking section-space"
+      id="booking"
+      aria-labelledby="bookingTitle"
+    >
+      <div class="container booking-layout">
+        <div class="booking-copy reveal">
+          <span class="eyebrow">Booking & Walk-ins</span>
+
+          <h2 id="bookingTitle">
+            Your quiet time begins here.
+          </h2>
+
+          <p>
+            Walk-ins are welcome daily from 10:00 AM to 9:00 PM. You may also
+            call ahead to ask about availability or use the form to prepare your
+            appointment request.
+          </p>
+
+          <a
+            class="booking-phone"
+            href="tel:+16199051236"
+            aria-label="Call Serenity Massage at 619-905-1236"
+          >
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M7.2 3.5 9.6 3a1.4 1.4 0 0 1 1.6.8l1.2 2.8a1.4 1.4 0 0 1-.4 1.6l-1.5 1.3a14.8 14.8 0 0 0 4 4l1.3-1.5a1.4 1.4 0 0 1 1.6-.4l2.8 1.2a1.4 1.4 0 0 1 .8 1.6l-.5 2.4a3 3 0 0 1-3 2.4C10.5 18.6 5.4 13.5 4.8 6.5a3 3 0 0 1 2.4-3Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+
+            (619) 905-1236
+          </a>
+
+          <div class="booking-info">
+            <div class="booking-info-row">
+              <strong>Hours</strong>
+              <span>Open daily, 10:00 AM–9:00 PM</span>
+            </div>
+
+            <div class="booking-info-row">
+              <strong>Location</strong>
+
+              <span>
+                10769 Woodside Ave #106, Santee, CA 92071
+              </span>
+            </div>
+
+            <div class="booking-info-row">
+              <strong>Arrival</strong>
+              <span>Walk-ins welcome; call ahead for availability</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="booking-form reveal" id="bookingForm">
+          <h3>Appointment Request</h3>
+
+          <p>
+            This form is for front-end display. Please call the store to confirm
+            your appointment.
+          </p>
+
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="guestName">Name</label>
+
+              <input
+                id="guestName"
+                name="guestName"
+                type="text"
+                autocomplete="name"
+                placeholder="Your name"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="guestPhone">Phone</label>
+
+              <input
+                id="guestPhone"
+                name="guestPhone"
+                type="tel"
+                autocomplete="tel"
+                placeholder="Your phone number"
+                required
+              />
+            </div>
+
+            <div class="form-field full">
+              <label for="serviceChoice">Service & Duration</label>
+
+              <select id="serviceChoice" name="serviceChoice" required>
+                <option value="">Select a service</option>
+                <option value="Body Massage - 30 Minutes - $40">
+                  Body Massage — 30 Minutes — $40
+                </option>
+                <option value="Body Massage - 60 Minutes - $60">
+                  Body Massage — 60 Minutes — $60
+                </option>
+                <option value="Body Massage - 90 Minutes - $90">
+                  Body Massage — 90 Minutes — $90
+                </option>
+                <option value="Body Massage - 120 Minutes - $120">
+                  Body Massage — 120 Minutes — $120
+                </option>
+                <option value="Combo Massage - 30 Body + 30 Foot - $60">
+                  Combo Massage — 30 Min Body + 30 Min Foot — $60
+                </option>
+                <option value="Combo Massage - 60 Body + 30 Foot - $90">
+                  Combo Massage — 60 Min Body + 30 Min Foot — $90
+                </option>
+                <option value="Combo Massage - 90 Body + 30 Foot - $120">
+                  Combo Massage — 90 Min Body + 30 Min Foot — $120
+                </option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="preferredDate">Preferred Date</label>
+
+              <input
+                id="preferredDate"
+                name="preferredDate"
+                type="date"
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="preferredTime">Preferred Time</label>
+
+              <input
+                id="preferredTime"
+                name="preferredTime"
+                type="time"
+                min="10:00"
+                max="21:00"
+              />
+            </div>
+
+            <div class="form-field full">
+              <label for="bookingNotes">Notes</label>
+
+              <textarea
+                id="bookingNotes"
+                name="bookingNotes"
+                placeholder="Add any scheduling notes or questions"
+              ></textarea>
+            </div>
+          </div>
+
+          <button class="button button-primary" type="submit">
+            Prepare Appointment Request
+          </button>
+
+          <p
+            class="form-status"
+            id="formStatus"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         REVIEWS
+    ====================================================== -->
+
+    <section
+      class="reviews section-space"
+      id="reviews"
+      aria-labelledby="reviewsTitle"
+    >
+      <div class="container">
+        <span class="section-kicker">Guest Impressions</span>
+
+        <h2 class="section-title" id="reviewsTitle">
+          The details guests appreciate most.
+        </h2>
+
+        <p class="section-intro">
+          Calm surroundings, a comfortable pace and a simple arrival experience
+          are often the most memorable parts of a relaxing visit.
+        </p>
+      </div>
+
+      <div class="review-marquees" aria-label="Guest impressions">
+        <div class="review-row">
+          <article class="review-card">
+            <div class="review-stars">★★★★★</div>
+
+            <blockquote>
+              “The environment felt peaceful from the moment I arrived.
+              Everything was quiet, comfortable and nicely presented.”
+            </blockquote>
+
+            <span class="review-author">Santee Guest</span>
+          </article>
+
+          <article class="review-card">
+            <div class="review-stars">★★★★★</div>
+
+            <blockquote>
+              “It was easy to call ahead, and the visit never felt rushed. The
+              atmosphere made it easy to slow down.”
+            </blockquote>
+
+            <span class="review-author">Local Guest</span>
+          </article>
+
+          <article class="review-card">
+            <div class="review-stars">★★★★★</div>
+
+            <blockquote>
+              “The space has a private and comfortable feeling. It was a welcome
+              break after a very busy week.”
+            </blockquote>
+
+            <span class="review-author">First-Time Visitor</span>
+          </article>
+
+          <article class="review-card">
+            <div class="review-stars">★★★★★</div>
+
+            <blockquote>
+              “I appreciated how clean and orderly everything felt. The whole
+              visit had an easy, relaxing flow.”
+            </blockquote>
+
+            <span class="review-author">Returning Guest</span>
+          </article>
+
+          <article class="review-card">
+            <div class="review-stars">★★★★★</div>
+
+            <blockquote>
+              “The hours are convenient, and being able to walk in made planning
+              my visit simple.”
+            </blockquote>
+
+            <span class="review-author">Walk-In Guest</span>
+          </article>
+
+          <!-- Duplicate group for continuous movement -->
+
+          <article class="review-card" aria-hidden="true">
+            <div class="review-stars">★★★★★</div>
+
+            <blockquote>
+              “The environment felt peaceful from the moment I arrived.
+              Everything was quiet, comfortable and nicely presented.”
+            </blockquote>
+
+            <span class="review-author">Santee Guest</span>
+          </article>
+
+          <article class="review-card" aria-hidden="true">
+            <div class="review-stars">★★★★★</div>
+
+            <blockquote>
+              “It was easy to call ahead, and the visit never felt rushed. The
+              atmosphere made it easy to slow down.”
+            </blockquote>
+
+            <span class="review-author">Local Guest</span>
+          </article>
+
+          <article class="review-card" aria-hidden="true">
+            <div class="review-stars">★★★★★</div>
+
+            <blockquote>
+              “The space has a private and comfortable feeling. It was a welcome
+              break after a very busy week.”
+            </blockquote>
+
+            <span class="review-author">First-Time Visitor</span>
+          </article>
+
+          <article class="review-card" aria-hidden="true">
+            <div class="review-stars">★★★★★</div>
+
+            <blockquote>
+              “I appreciated how clean and orderly everything felt. The whole
+              visit had an easy, relaxing flow.”
+            </blockquote>
+
+            <span class="review-author">Returning Guest</span>
+          </article>
+
+          <article class="review-card" aria-hidden="true">
+            <div class="review-stars">★★★★★</div>
+
+            <blockquote>
+              “The hours are convenient, and being able to walk in made planning
+              my visit simple.”
+            </blockquote>
+
+            <span class="review-author">Walk-In Guest</span>
+          </article>
+        </div>
+
+        <div class="review-row reverse">
+          <article class="review-card">
+            <div class="review-stars">★★★★★</div>
+
+            <blockquote>
+              “The combination session was a nice way to include both body and
+              foot relaxation without making the visit feel complicated.”
+            </blockquote>
+
+            <span class="review-author">Combo Massage Guest</span>
+          </article>
+
+          <article class="review-card">
+            <div class="review-stars">★★★★★</div>
+
+            <blockquote>
+              “I came in after a long day and immediately noticed how peaceful
+              the setting felt.”
+            </blockquote>
+
+            <span class="review-author">After-Work Guest</span>
+          </article>
+
+          <article class="review-card">
+            <div class="review-stars">★★★★★</div>
+
+            <blockquote>
+              “The late closing time made scheduling much easier. Calling before
+              I arrived was quick and straightforward.”
+            </blockquote>
+
+            <span class="review-author">Evening Guest</span>
+          </article>
+
+          <article class="review-card">
+            <div class="review-stars">★★★★★</div>
+
+            <blockquote>
+              “The atmosphere feels simple and elegant rather than crowded. I
+              enjoyed the quiet pace.”
+            </blockquote>
+
+            <span class="review-author">Neighborhood Guest</span>
+          </article>
+
+          <article class="review-card">
+            <div class="review-stars">★★★★★</div>
+
+            <blockquote>
+              “Everything from arrival to the end of the visit felt smooth,
+              comfortable and carefully organized.”
+            </blockquote>
+
+            <span class="review-author">Recent Visitor</span>
+          </article>
+
+          <!-- Duplicate group for continuous movement -->
+
+          <article class="review-card" aria-hidden="true">
+            <div class="review-stars">★★★★★</div>
+
+            <blockquote>
+              “The combination session was a nice way to include both body and
+              foot relaxation without making the visit feel complicated.”
+            </blockquote>
+
+            <span class="review-author">Combo Massage Guest</span>
+          </article>
+
+          <article class="review-card" aria-hidden="true">
+            <div class="review-stars">★★★★★</div>
+
+            <blockquote>
+              “I came in after a long day and immediately noticed how peaceful
+              the setting felt.”
+            </blockquote>
+
+            <span class="review-author">After-Work Guest</span>
+          </article>
+
+          <article class="review-card" aria-hidden="true">
+            <div class="review-stars">★★★★★</div>
+
+            <blockquote>
+              “The late closing time made scheduling much easier. Calling before
+              I arrived was quick and straightforward.”
+            </blockquote>
+
+            <span class="review-author">Evening Guest</span>
+          </article>
+
+          <article class="review-card" aria-hidden="true">
+            <div class="review-stars">★★★★★</div>
+
+            <blockquote>
+              “The atmosphere feels simple and elegant rather than crowded. I
+              enjoyed the quiet pace.”
+            </blockquote>
+
+            <span class="review-author">Neighborhood Guest</span>
+          </article>
+
+          <article class="review-card" aria-hidden="true">
+            <div class="review-stars">★★★★★</div>
+
+            <blockquote>
+              “Everything from arrival to the end of the visit felt smooth,
+              comfortable and carefully organized.”
+            </blockquote>
+
+            <span class="review-author">Recent Visitor</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         FAQ
+    ====================================================== -->
+
+    <section
+      class="section-space"
+      id="faq"
+      aria-labelledby="faqTitle"
+    >
+      <div class="container faq-layout">
+        <div class="faq-intro reveal">
+          <span class="section-kicker">Before Your Visit</span>
+
+          <h2 class="section-title" id="faqTitle">
+            A few helpful details.
+          </h2>
+
+          <p class="section-intro">
+            For appointment availability or service questions, please call
+            Serenity Massage directly at
+            <a href="tel:+16199051236">
+              <strong>(619) 905-1236</strong>
+            </a>.
+          </p>
+        </div>
+
+        <div class="faq-list reveal">
+          <article class="faq-item">
+            <button
+              class="faq-question"
+              type="button"
+              aria-expanded="false"
+              aria-controls="faq-answer-1"
+            >
+              <span>How early should I arrive?</span>
+
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+
+            <div
+              class="faq-answer"
+              id="faq-answer-1"
+              role="region"
+            >
+              <div class="faq-answer-inner">
+                Arriving approximately 10 minutes before your scheduled time is
+                a comfortable guideline. This gives you time to settle in
+                without feeling rushed. Walk-in guests may visit during regular
+                business hours.
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button
+              class="faq-question"
+              type="button"
+              aria-expanded="false"
+              aria-controls="faq-answer-2"
+            >
+              <span>Can I get a massage if I have an injury?</span>
+
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+
+            <div
+              class="faq-answer"
+              id="faq-answer-2"
+              role="region"
+            >
+              <div class="faq-answer-inner">
+                Please speak with a qualified healthcare professional before
+                booking if you have a current injury, recent procedure or health
+                concern. Call Serenity Massage in advance to discuss any
+                relevant limitations before your visit.
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button
+              class="faq-question"
+              type="button"
+              aria-expanded="false"
+              aria-controls="faq-answer-3"
+            >
+              <span>What is your cancellation policy?</span>
+
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+
+            <div
+              class="faq-answer"
+              id="faq-answer-3"
+              role="region"
+            >
+              <div class="faq-answer-inner">
+                Please confirm the current cancellation and rescheduling policy
+                when booking. If your plans change, call as early as possible so
+                the store can advise you about your appointment.
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button
+              class="faq-question"
+              type="button"
+              aria-expanded="false"
+              aria-controls="faq-answer-4"
+            >
+              <span>Is there parking available?</span>
+
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+
+            <div
+              class="faq-answer"
+              id="faq-answer-4"
+              role="region"
+            >
+              <div class="faq-answer-inner">
+                Parking conditions may vary depending on the day and time.
+                Please call before your visit for the most current parking
+                guidance near 10769 Woodside Avenue, Suite 106.
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         CONTACT & LOCATION
+    ====================================================== -->
+
+    <section
+      class="contact section-space"
+      id="contact"
+      aria-labelledby="contactTitle"
+    >
+      <div class="container contact-layout">
+        <div class="contact-panel reveal">
+          <div>
+            <span class="eyebrow">Contact & Location</span>
+
+            <h2 id="contactTitle">
+              Visit Serenity Massage.
+            </h2>
+
+            <p>
+              Located on Woodside Avenue in Santee. Walk-ins are welcome, and
+              appointment questions can be handled directly by phone.
+            </p>
+
+            <div class="contact-details">
+              <div class="contact-detail">
+                <span class="contact-detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                      d="M12 21s7-6.1 7-12A7 7 0 1 0 5 9c0 5.9 7 12 7 12Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    />
+
+                    <circle
+                      cx="12"
+                      cy="9"
+                      r="2.3"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    />
+                  </svg>
+                </span>
+
+                <div>
+                  <strong>Address</strong>
+
+                  <span>
+                    10769 Woodside Ave #106<br />
+                    Santee, CA 92071
+                  </span>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <span class="contact-detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                      d="M7.2 3.5 9.6 3a1.4 1.4 0 0 1 1.6.8l1.2 2.8a1.4 1.4 0 0 1-.4 1.6l-1.5 1.3a14.8 14.8 0 0 0 4 4l1.3-1.5a1.4 1.4 0 0 1 1.6-.4l2.8 1.2a1.4 1.4 0 0 1 .8 1.6l-.5 2.4a3 3 0 0 1-3 2.4C10.5 18.6 5.4 13.5 4.8 6.5a3 3 0 0 1 2.4-3Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    />
+                  </svg>
+                </span>
+
+                <div>
+                  <strong>Telephone</strong>
+
+                  <a href="tel:+16199051236">
+                    (619) 905-1236
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <span class="contact-detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="8.5"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    />
+
+                    <path
+                      d="M12 7v5l3.2 2"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+
+                <div>
+                  <strong>Business Hours</strong>
+
+                  <span>
+                    Monday–Sunday<br />
+                    10:00 AM–9:00 PM
+                  </span>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <span class="contact-detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                      d="M5 12.5 9.1 17 19 6"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+
+                <div>
+                  <strong>Arrival</strong>
+                  <span>Walk-ins welcome</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-actions">
+            <a class="button button-primary" href="tel:+16199051236">
+              Call to Book
+            </a>
+
+            <a
+              class="button button-outline"
+              href="https://www.google.com/maps/dir/?api=1&destination=10769+Woodside+Ave+%23106,+Santee,+CA+92071"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get Directions
+            </a>
+          </div>
+        </div>
+
+        <div class="map-wrap reveal">
+          <iframe
+            title="Map showing Serenity Massage at 10769 Woodside Avenue, Santee"
+            src="https://www.google.com/maps?q=10769+Woodside+Ave+%23106,+Santee,+CA+92071&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <a
+          class="brand"
+          href="#home"
+          aria-label="Serenity Massage home"
+        >
+          <span class="brand-mark" aria-hidden="true"></span>
+
+          <span>
+            <span class="brand-name">Serenity Massage</span>
+            <span class="brand-subtitle">Santee, California</span>
+          </span>
+        </a>
+
+        <p>
+          A quiet, private setting for body massage and body-and-foot combo
+          massage. Walk-ins are welcome daily from 10:00 AM to 9:00 PM.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Explore</h3>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="#about">About</a>
+          <a href="#services">Services & Pricing</a>
+          <a href="#experience">Experience</a>
+          <a href="#booking">Booking</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+      </div>
+
+      <div class="footer-column">
+        <h3>Visit</h3>
+
+        <p>
+          10769 Woodside Ave #106<br />
+          Santee, CA 92071
+        </p>
+
+        <p style="margin-top: 12px;">
+          <a href="tel:+16199051236">
+            (619) 905-1236
+          </a>
+        </p>
+
+        <p style="margin-top: 12px;">
+          Open daily<br />
+          10:00 AM–9:00 PM
+        </p>
+
+        <p style="margin-top: 12px;">
+          Walk-ins welcome
+        </p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>
+        © <span id="currentYear"></span> Serenity Massage.
+        All rights reserved.
+      </span>
+
+      <span>
+        Body & Combo Massage · Santee, California
+      </span>
+    </div>
+  </footer>
+
+  <!-- Floating call button -->
+
+  <a
+    class="floating-call"
+    href="tel:+16199051236"
+    aria-label="Call Serenity Massage at 619-905-1236"
+  >
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path
+        d="M7.2 3.5 9.6 3a1.4 1.4 0 0 1 1.6.8l1.2 2.8a1.4 1.4 0 0 1-.4 1.6l-1.5 1.3a14.8 14.8 0 0 0 4 4l1.3-1.5a1.4 1.4 0 0 1 1.6-.4l2.8 1.2a1.4 1.4 0 0 1 .8 1.6l-.5 2.4a3 3 0 0 1-3 2.4C10.5 18.6 5.4 13.5 4.8 6.5a3 3 0 0 1 2.4-3Z"
+        stroke="currentColor"
+        stroke-width="1.7"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </a>
+
+  <script>
+    /* =========================================================
+       1. HEADER SCROLL STATE
+    ========================================================= */
+
+    const siteHeader = document.getElementById("siteHeader");
+
+    function updateHeader() {
+      siteHeader.classList.toggle("is-scrolled", window.scrollY > 24);
+    }
+
+    updateHeader();
+
+    window.addEventListener("scroll", updateHeader, {
+      passive: true
+    });
+
+    /* =========================================================
+       2. MOBILE NAVIGATION
+    ========================================================= */
+
+    const menuButton = document.getElementById("menuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+
+    function setMobileMenu(open) {
+      menuButton.setAttribute("aria-expanded", String(open));
+
+      menuButton.setAttribute(
+        "aria-label",
+        open ? "Close navigation menu" : "Open navigation menu"
+      );
+
+      mobileMenu.setAttribute("aria-hidden", String(!open));
+      mobileMenu.classList.toggle("is-open", open);
+      document.body.classList.toggle("menu-open", open);
+    }
+
+    menuButton.addEventListener("click", () => {
+      const isOpen =
+        menuButton.getAttribute("aria-expanded") === "true";
+
+      setMobileMenu(!isOpen);
+    });
+
+    mobileMenuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        setMobileMenu(false);
+      });
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 900) {
+        setMobileMenu(false);
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setMobileMenu(false);
+      }
+    });
+
+    /* =========================================================
+       3. HERO BACKGROUND CAROUSEL
+    ========================================================= */
+
+    const heroSlides = [
+      ...document.querySelectorAll(".hero-slide")
+    ];
+
+    const heroDots = [
+      ...document.querySelectorAll(".hero-dot")
+    ];
+
+    let heroIndex = 0;
+    let heroTimer;
+
+    function showHeroSlide(index) {
+      heroIndex =
+        (index + heroSlides.length) % heroSlides.length;
+
+      heroSlides.forEach((slide, slideIndex) => {
+        slide.classList.toggle(
+          "is-active",
+          slideIndex === heroIndex
+        );
+      });
+
+      heroDots.forEach((dot, dotIndex) => {
+        const isActive = dotIndex === heroIndex;
+
+        dot.classList.toggle("is-active", isActive);
+
+        dot.setAttribute(
+          "aria-current",
+          isActive ? "true" : "false"
+        );
+      });
+    }
+
+    function startHeroCarousel() {
+      window.clearInterval(heroTimer);
+
+      heroTimer = window.setInterval(() => {
+        showHeroSlide(heroIndex + 1);
+      }, 6500);
+    }
+
+    heroDots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        showHeroSlide(index);
+        startHeroCarousel();
+      });
+    });
+
+    showHeroSlide(0);
+    startHeroCarousel();
+
+    /* =========================================================
+       4. SERVICE IMAGE CAROUSELS
+    ========================================================= */
+
+    const serviceCarousels =
+      document.querySelectorAll("[data-carousel]");
+
+    serviceCarousels.forEach((carousel, carouselIndex) => {
+      const slides = [
+        ...carousel.querySelectorAll(".service-slide")
+      ];
+
+      const bars = [
+        ...carousel.querySelectorAll(".carousel-bar")
+      ];
+
+      if (slides.length < 2) {
+        return;
+      }
+
+      let currentIndex = 0;
+
+      function showServiceSlide(index) {
+        currentIndex =
+          (index + slides.length) % slides.length;
+
+        slides.forEach((slide, slideIndex) => {
+          const active = slideIndex === currentIndex;
+
+          slide.classList.toggle("is-active", active);
+          slide.setAttribute("aria-hidden", String(!active));
+        });
+
+        bars.forEach((bar, barIndex) => {
+          bar.classList.toggle(
+            "is-active",
+            barIndex === currentIndex
+          );
+        });
+      }
+
+      showServiceSlide(0);
+
+      window.setTimeout(() => {
+        window.setInterval(() => {
+          showServiceSlide(currentIndex + 1);
+        }, 4800 + (carouselIndex % 3) * 550);
+      }, carouselIndex * 320);
+    });
+
+    /* =========================================================
+       5. BOOKING FORM DISPLAY
+    ========================================================= */
+
+    const bookingForm =
+      document.getElementById("bookingForm");
+
+    const formStatus =
+      document.getElementById("formStatus");
+
+    bookingForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const guestName =
+        document.getElementById("guestName").value.trim();
+
+      const selectedService =
+        document.getElementById("serviceChoice").value;
+
+      if (!guestName || !selectedService) {
+        formStatus.textContent =
+          "Please enter your name and select a service.";
+
+        return;
+      }
+
+      formStatus.textContent =
+        "Your request has been prepared. Please call (619) 905-1236 to confirm availability and complete your reservation.";
+    });
+
+    /* =========================================================
+       6. ACCESSIBLE FAQ ACCORDION
+    ========================================================= */
+
+    const faqButtons =
+      document.querySelectorAll(".faq-question");
+
+    faqButtons.forEach((button) => {
+      const answer = document.getElementById(
+        button.getAttribute("aria-controls")
+      );
+
+      button.addEventListener("click", () => {
+        const isOpen =
+          button.getAttribute("aria-expanded") === "true";
+
+        faqButtons.forEach((otherButton) => {
+          const otherAnswer = document.getElementById(
+            otherButton.getAttribute("aria-controls")
+          );
+
+          otherButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          otherAnswer.style.maxHeight = null;
+        });
+
+        if (!isOpen) {
+          button.setAttribute("aria-expanded", "true");
+
+          answer.style.maxHeight =
+            answer.scrollHeight + "px";
+        }
+      });
+    });
+
+    /* =========================================================
+       7. SCROLL REVEAL
+    ========================================================= */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const revealObserver =
+        new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.12,
+            rootMargin: "0px 0px -40px"
+          }
+        );
+
+      revealElements.forEach((element) => {
+        revealObserver.observe(element);
+      });
+    } else {
+      revealElements.forEach((element) => {
+        element.classList.add("is-visible");
+      });
+    }
+
+    /* =========================================================
+       8. ACTIVE DESKTOP NAVIGATION
+    ========================================================= */
+
+    const pageSections =
+      document.querySelectorAll("main section[id]");
+
+    const desktopNavLinks =
+      document.querySelectorAll(
+        '.desktop-nav a[href^="#"]'
+      );
+
+    if ("IntersectionObserver" in window) {
+      const sectionObserver =
+        new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) {
+                return;
+              }
+
+              desktopNavLinks.forEach((link) => {
+                link.classList.toggle(
+                  "is-active",
+                  link.getAttribute("href") ===
+                    "#" + entry.target.id
+                );
+              });
+            });
+          },
+          {
+            threshold: 0.42,
+            rootMargin: "-80px 0px -35% 0px"
+          }
+        );
+
+      pageSections.forEach((section) => {
+        sectionObserver.observe(section);
+      });
+    }
+
+    /* =========================================================
+       9. FOOTER YEAR
+    ========================================================= */
+
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
