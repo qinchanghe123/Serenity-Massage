@@ -93,10 +93,7 @@
       text-decoration: none;
     }
 
-    button,
-    input,
-    select,
-    textarea {
+    button {
       font: inherit;
     }
 
@@ -106,10 +103,7 @@
     }
 
     button:focus-visible,
-    a:focus-visible,
-    input:focus-visible,
-    select:focus-visible,
-    textarea:focus-visible {
+    a:focus-visible {
       outline: 3px solid rgba(216, 189, 134, 0.85);
       outline-offset: 4px;
     }
@@ -427,8 +421,7 @@
       background: currentColor;
       transition:
         transform 240ms ease,
-        top 240ms ease,
-        opacity 240ms ease;
+        top 240ms ease;
     }
 
     .menu-button-lines span:first-child {
@@ -678,7 +671,7 @@
     }
 
     /* =========================================================
-       4. INTRO STRIP
+       4. INTRO
     ========================================================= */
 
     .intro-strip {
@@ -973,7 +966,7 @@
     }
 
     /* =========================================================
-       7. SERVICES & PRICING
+       7. SERVICES
     ========================================================= */
 
     .services {
@@ -1252,7 +1245,7 @@
     }
 
     /* =========================================================
-       8. ATMOSPHERE GALLERY
+       8. GALLERY
     ========================================================= */
 
     .gallery {
@@ -1329,187 +1322,7 @@
     }
 
     /* =========================================================
-       9. BOOKING
-    ========================================================= */
-
-    .booking {
-      color: var(--warm-white);
-      background:
-        radial-gradient(
-          circle at 12% 14%,
-          rgba(216, 189, 134, 0.14),
-          transparent 26rem
-        ),
-        var(--forest);
-    }
-
-    .booking-layout {
-      display: grid;
-      grid-template-columns: 0.86fr 1.14fr;
-      gap: clamp(38px, 7vw, 90px);
-      align-items: center;
-    }
-
-    .booking-copy h2 {
-      margin: 16px 0 22px;
-      font-family: var(--serif);
-      font-size: clamp(3rem, 6vw, 6rem);
-      font-weight: 600;
-      letter-spacing: -0.04em;
-      line-height: 0.88;
-    }
-
-    .booking-copy > p {
-      max-width: 560px;
-      margin: 0;
-      color: rgba(255, 255, 255, 0.65);
-    }
-
-    .booking-phone {
-      margin-top: 34px;
-      display: inline-flex;
-      align-items: center;
-      gap: 15px;
-      color: var(--gold-light);
-      font-family: var(--serif);
-      font-size: clamp(1.9rem, 4vw, 3.4rem);
-      font-weight: 600;
-      line-height: 1;
-    }
-
-    .booking-phone svg {
-      width: 30px;
-      height: 30px;
-    }
-
-    .booking-info {
-      margin-top: 34px;
-      display: grid;
-      gap: 14px;
-    }
-
-    .booking-info-row {
-      display: grid;
-      grid-template-columns: 110px 1fr;
-      gap: 15px;
-      padding-top: 14px;
-      border-top: 1px solid rgba(255, 255, 255, 0.13);
-      font-size: 0.86rem;
-    }
-
-    .booking-info-row strong {
-      color: var(--gold-light);
-      text-transform: uppercase;
-      letter-spacing: 0.11em;
-      font-size: 0.68rem;
-    }
-
-    .booking-info-row span {
-      color: rgba(255, 255, 255, 0.73);
-    }
-
-    .booking-form {
-      padding: clamp(28px, 5vw, 50px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: var(--radius-xl);
-      background: rgba(255, 255, 255, 0.055);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(18px);
-    }
-
-    .booking-form h3 {
-      margin: 0;
-      font-family: var(--serif);
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 600;
-      line-height: 1;
-    }
-
-    .booking-form > p {
-      margin: 12px 0 26px;
-      color: rgba(255, 255, 255, 0.58);
-      font-size: 0.86rem;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 17px;
-    }
-
-    .form-field {
-      display: grid;
-      gap: 8px;
-    }
-
-    .form-field.full {
-      grid-column: 1 / -1;
-    }
-
-    .form-field label {
-      color: var(--gold-light);
-      font-size: 0.66rem;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .form-field input,
-    .form-field select,
-    .form-field textarea {
-      width: 100%;
-      color: var(--warm-white);
-      border: 1px solid rgba(255, 255, 255, 0.17);
-      border-radius: var(--radius-sm);
-      background: rgba(255, 255, 255, 0.06);
-      outline: none;
-      transition:
-        border-color 220ms ease,
-        background 220ms ease;
-    }
-
-    .form-field input,
-    .form-field select {
-      min-height: 52px;
-      padding: 0 15px;
-    }
-
-    .form-field textarea {
-      min-height: 120px;
-      padding: 14px 15px;
-      resize: vertical;
-    }
-
-    .form-field input::placeholder,
-    .form-field textarea::placeholder {
-      color: rgba(255, 255, 255, 0.38);
-    }
-
-    .form-field select {
-      color-scheme: dark;
-    }
-
-    .form-field input:focus,
-    .form-field select:focus,
-    .form-field textarea:focus {
-      border-color: var(--gold-light);
-      background: rgba(255, 255, 255, 0.09);
-    }
-
-    .booking-form .button {
-      width: 100%;
-      margin-top: 20px;
-    }
-
-    .form-status {
-      min-height: 24px;
-      margin: 15px 0 0;
-      color: var(--gold-light);
-      font-size: 0.82rem;
-    }
-
-    /* =========================================================
-       10. REVIEWS
+       9. REVIEWS
     ========================================================= */
 
     .reviews {
@@ -1606,6 +1419,121 @@
       to {
         transform: translateX(0);
       }
+    }
+
+    /* =========================================================
+       10. CALL TO BOOK
+    ========================================================= */
+
+    .reservation {
+      background: var(--cream);
+    }
+
+    .reservation-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      overflow: hidden;
+      border-radius: var(--radius-xl);
+      background: var(--forest);
+      box-shadow: var(--shadow);
+    }
+
+    .reservation-image {
+      min-height: 610px;
+      position: relative;
+    }
+
+    .reservation-image img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .reservation-image::after {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          90deg,
+          transparent 45%,
+          rgba(16, 37, 31, 0.72) 100%
+        ),
+        linear-gradient(
+          0deg,
+          rgba(16, 37, 31, 0.34),
+          transparent 50%
+        );
+      content: "";
+    }
+
+    .reservation-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(44px, 6vw, 84px);
+      color: var(--warm-white);
+    }
+
+    .reservation-content h2 {
+      margin: 16px 0 22px;
+      font-family: var(--serif);
+      font-size: clamp(3rem, 5vw, 5.6rem);
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      line-height: 0.9;
+    }
+
+    .reservation-content p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    .reservation-phone {
+      margin-top: 34px;
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      color: var(--gold-light);
+      font-family: var(--serif);
+      font-size: clamp(1.85rem, 3.6vw, 3.2rem);
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .reservation-phone svg {
+      width: 30px;
+      height: 30px;
+      flex: 0 0 auto;
+    }
+
+    .reservation-details {
+      margin-top: 36px;
+      display: grid;
+      gap: 16px;
+      padding-top: 25px;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .reservation-detail {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 16px;
+    }
+
+    .reservation-detail strong {
+      color: var(--gold-light);
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .reservation-detail span {
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .reservation-content .button {
+      margin-top: 30px;
+      align-self: flex-start;
     }
 
     /* =========================================================
@@ -1899,7 +1827,7 @@
     }
 
     /* =========================================================
-       14. RESPONSIVE DESIGN
+       14. RESPONSIVE
     ========================================================= */
 
     @media (max-width: 1100px) {
@@ -1925,10 +1853,6 @@
 
       .experience-card:nth-child(-n + 2) {
         border-bottom: 1px solid var(--white-line);
-      }
-
-      .booking-layout {
-        grid-template-columns: 0.9fr 1.1fr;
       }
 
       .contact-layout {
@@ -2035,8 +1959,20 @@
         grid-column: 1 / 3;
       }
 
-      .booking-layout {
+      .reservation-card {
         grid-template-columns: 1fr;
+      }
+
+      .reservation-image {
+        min-height: 420px;
+      }
+
+      .reservation-image::after {
+        background: linear-gradient(
+          0deg,
+          rgba(16, 37, 31, 0.72),
+          transparent 68%
+        );
       }
 
       .faq-layout {
@@ -2221,25 +2157,25 @@
         grid-column: auto;
       }
 
-      .form-grid {
-        grid-template-columns: 1fr;
+      .reservation-image {
+        min-height: 330px;
       }
 
-      .form-field.full {
-        grid-column: auto;
+      .reservation-content {
+        padding: 42px 24px 48px;
       }
 
-      .booking-form {
-        padding: 28px 20px;
-      }
-
-      .booking-phone {
+      .reservation-phone {
         font-size: 1.75rem;
       }
 
-      .booking-info-row {
+      .reservation-detail {
         grid-template-columns: 1fr;
         gap: 4px;
+      }
+
+      .reservation-content .button {
+        width: 100%;
       }
 
       .faq-answer-inner {
@@ -2358,7 +2294,6 @@
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#experience">Experience</a>
-        <a href="#booking">Booking</a>
         <a href="#reviews">Reviews</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
@@ -2419,8 +2354,18 @@
           </p>
 
           <div class="hero-actions">
-            <a class="button button-primary" href="#booking">
-              Book Now
+            <a class="button button-primary" href="tel:+16199051236">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M7.2 3.5 9.6 3a1.4 1.4 0 0 1 1.6.8l1.2 2.8a1.4 1.4 0 0 1-.4 1.6l-1.5 1.3a14.8 14.8 0 0 0 4 4l1.3-1.5a1.4 1.4 0 0 1 1.6-.4l2.8 1.2a1.4 1.4 0 0 1 .8 1.6l-.5 2.4a3 3 0 0 1-3 2.4C10.5 18.6 5.4 13.5 4.8 6.5a3 3 0 0 1 2.4-3Z"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              Call to Book
             </a>
 
             <a class="button button-outline" href="#services">
@@ -2440,6 +2385,7 @@
                 />
               </svg>
             </span>
+
             Quiet Rooms
           </div>
 
@@ -2453,6 +2399,7 @@
                 />
               </svg>
             </span>
+
             Private Atmosphere
           </div>
 
@@ -2466,6 +2413,7 @@
                 />
               </svg>
             </span>
+
             Clean Setting
           </div>
 
@@ -2479,6 +2427,7 @@
                 />
               </svg>
             </span>
+
             Walk-ins Welcome
           </div>
         </div>
@@ -2512,7 +2461,7 @@
     </section>
 
     <!-- =====================================================
-         BRAND INTRO
+         INTRO
     ====================================================== -->
 
     <section
@@ -2531,7 +2480,7 @@
         <p class="intro-text reveal">
           Our space is designed to help you leave everyday distractions at the
           door. A peaceful atmosphere, thoughtful presentation and simple
-          booking process make it easier to slow down and enjoy time devoted to
+          phone booking make it easier to slow down and enjoy time devoted to
           relaxation.
         </p>
       </div>
@@ -2625,11 +2574,11 @@
               <span class="feature-number">03</span>
 
               <div>
-                <h3>Easy Arrival & Booking</h3>
+                <h3>Easy Phone Booking</h3>
 
                 <p>
-                  Walk in during business hours or call ahead to ask questions
-                  and reserve your preferred session.
+                  Call directly to ask questions, confirm availability and
+                  reserve your preferred session.
                 </p>
               </div>
             </article>
@@ -2714,7 +2663,7 @@
     </section>
 
     <!-- =====================================================
-         SERVICES & PRICING
+         SERVICES
     ====================================================== -->
 
     <section
@@ -2750,7 +2699,7 @@
           </div>
 
           <a class="button button-primary" href="tel:+16199051236">
-            Call to Reserve
+            Call to Book
           </a>
         </article>
 
@@ -2877,7 +2826,7 @@
               <div class="service-slide is-active">
                 <img
                   src="https://i.pinimg.com/736x/86/47/ef/8647ef5b51553a8e57ca32e6b2ec74f0.jpg"
-                  alt="Relaxing body massage portion of a combo session"
+                  alt="Body massage portion of a combo session"
                   loading="lazy"
                   onerror="this.parentElement.classList.add('image-fallback'); this.remove();"
                 />
@@ -3060,179 +3009,6 @@
     </section>
 
     <!-- =====================================================
-         BOOKING
-    ====================================================== -->
-
-    <section
-      class="booking section-space"
-      id="booking"
-      aria-labelledby="bookingTitle"
-    >
-      <div class="container booking-layout">
-        <div class="booking-copy reveal">
-          <span class="eyebrow">Booking & Walk-ins</span>
-
-          <h2 id="bookingTitle">
-            Your quiet time begins here.
-          </h2>
-
-          <p>
-            Walk-ins are welcome daily from 10:00 AM to 9:00 PM. You may also
-            call ahead to ask about availability or use the form to prepare your
-            appointment request.
-          </p>
-
-          <a
-            class="booking-phone"
-            href="tel:+16199051236"
-            aria-label="Call Serenity Massage at 619-905-1236"
-          >
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path
-                d="M7.2 3.5 9.6 3a1.4 1.4 0 0 1 1.6.8l1.2 2.8a1.4 1.4 0 0 1-.4 1.6l-1.5 1.3a14.8 14.8 0 0 0 4 4l1.3-1.5a1.4 1.4 0 0 1 1.6-.4l2.8 1.2a1.4 1.4 0 0 1 .8 1.6l-.5 2.4a3 3 0 0 1-3 2.4C10.5 18.6 5.4 13.5 4.8 6.5a3 3 0 0 1 2.4-3Z"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-
-            (619) 905-1236
-          </a>
-
-          <div class="booking-info">
-            <div class="booking-info-row">
-              <strong>Hours</strong>
-              <span>Open daily, 10:00 AM–9:00 PM</span>
-            </div>
-
-            <div class="booking-info-row">
-              <strong>Location</strong>
-
-              <span>
-                10769 Woodside Ave #106, Santee, CA 92071
-              </span>
-            </div>
-
-            <div class="booking-info-row">
-              <strong>Arrival</strong>
-              <span>Walk-ins welcome; call ahead for availability</span>
-            </div>
-          </div>
-        </div>
-
-        <form class="booking-form reveal" id="bookingForm">
-          <h3>Appointment Request</h3>
-
-          <p>
-            This form is for front-end display. Please call the store to confirm
-            your appointment.
-          </p>
-
-          <div class="form-grid">
-            <div class="form-field">
-              <label for="guestName">Name</label>
-
-              <input
-                id="guestName"
-                name="guestName"
-                type="text"
-                autocomplete="name"
-                placeholder="Your name"
-                required
-              />
-            </div>
-
-            <div class="form-field">
-              <label for="guestPhone">Phone</label>
-
-              <input
-                id="guestPhone"
-                name="guestPhone"
-                type="tel"
-                autocomplete="tel"
-                placeholder="Your phone number"
-                required
-              />
-            </div>
-
-            <div class="form-field full">
-              <label for="serviceChoice">Service & Duration</label>
-
-              <select id="serviceChoice" name="serviceChoice" required>
-                <option value="">Select a service</option>
-                <option value="Body Massage - 30 Minutes - $40">
-                  Body Massage — 30 Minutes — $40
-                </option>
-                <option value="Body Massage - 60 Minutes - $60">
-                  Body Massage — 60 Minutes — $60
-                </option>
-                <option value="Body Massage - 90 Minutes - $90">
-                  Body Massage — 90 Minutes — $90
-                </option>
-                <option value="Body Massage - 120 Minutes - $120">
-                  Body Massage — 120 Minutes — $120
-                </option>
-                <option value="Combo Massage - 30 Body + 30 Foot - $60">
-                  Combo Massage — 30 Min Body + 30 Min Foot — $60
-                </option>
-                <option value="Combo Massage - 60 Body + 30 Foot - $90">
-                  Combo Massage — 60 Min Body + 30 Min Foot — $90
-                </option>
-                <option value="Combo Massage - 90 Body + 30 Foot - $120">
-                  Combo Massage — 90 Min Body + 30 Min Foot — $120
-                </option>
-              </select>
-            </div>
-
-            <div class="form-field">
-              <label for="preferredDate">Preferred Date</label>
-
-              <input
-                id="preferredDate"
-                name="preferredDate"
-                type="date"
-              />
-            </div>
-
-            <div class="form-field">
-              <label for="preferredTime">Preferred Time</label>
-
-              <input
-                id="preferredTime"
-                name="preferredTime"
-                type="time"
-                min="10:00"
-                max="21:00"
-              />
-            </div>
-
-            <div class="form-field full">
-              <label for="bookingNotes">Notes</label>
-
-              <textarea
-                id="bookingNotes"
-                name="bookingNotes"
-                placeholder="Add any scheduling notes or questions"
-              ></textarea>
-            </div>
-          </div>
-
-          <button class="button button-primary" type="submit">
-            Prepare Appointment Request
-          </button>
-
-          <p
-            class="form-status"
-            id="formStatus"
-            role="status"
-            aria-live="polite"
-          ></p>
-        </form>
-      </div>
-    </section>
-
-    <!-- =====================================================
          REVIEWS
     ====================================================== -->
 
@@ -3310,8 +3086,6 @@
 
             <span class="review-author">Walk-In Guest</span>
           </article>
-
-          <!-- Duplicate group for continuous movement -->
 
           <article class="review-card" aria-hidden="true">
             <div class="review-stars">★★★★★</div>
@@ -3425,8 +3199,6 @@
             <span class="review-author">Recent Visitor</span>
           </article>
 
-          <!-- Duplicate group for continuous movement -->
-
           <article class="review-card" aria-hidden="true">
             <div class="review-stars">★★★★★</div>
 
@@ -3486,6 +3258,95 @@
     </section>
 
     <!-- =====================================================
+         CALL TO BOOK — NO FORM
+    ====================================================== -->
+
+    <section
+      class="reservation section-space"
+      id="booking"
+      aria-labelledby="reservationTitle"
+    >
+      <div class="container">
+        <div class="reservation-card reveal">
+          <div class="reservation-image">
+            <img
+              src="https://i.pinimg.com/736x/c0/e8/3f/c0e83fc3058518c785d6cfe1b15da601.jpg"
+              alt="Peaceful Serenity Massage atmosphere"
+              loading="lazy"
+              onerror="this.parentElement.classList.add('image-fallback'); this.remove();"
+            />
+          </div>
+
+          <div class="reservation-content">
+            <span class="eyebrow">Reservations by Phone</span>
+
+            <h2 id="reservationTitle">
+              Your quiet time begins with one call.
+            </h2>
+
+            <p>
+              Call Serenity Massage to ask about availability, confirm session
+              details and reserve your preferred body massage or combo massage.
+              Walk-ins are also welcome during regular business hours.
+            </p>
+
+            <a
+              class="reservation-phone"
+              href="tel:+16199051236"
+              aria-label="Call Serenity Massage at 619-905-1236"
+            >
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M7.2 3.5 9.6 3a1.4 1.4 0 0 1 1.6.8l1.2 2.8a1.4 1.4 0 0 1-.4 1.6l-1.5 1.3a14.8 14.8 0 0 0 4 4l1.3-1.5a1.4 1.4 0 0 1 1.6-.4l2.8 1.2a1.4 1.4 0 0 1 .8 1.6l-.5 2.4a3 3 0 0 1-3 2.4C10.5 18.6 5.4 13.5 4.8 6.5a3 3 0 0 1 2.4-3Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              (619) 905-1236
+            </a>
+
+            <div class="reservation-details">
+              <div class="reservation-detail">
+                <strong>Open Daily</strong>
+                <span>10:00 AM–9:00 PM</span>
+              </div>
+
+              <div class="reservation-detail">
+                <strong>Address</strong>
+
+                <span>
+                  10769 Woodside Ave #106, Santee, CA 92071
+                </span>
+              </div>
+
+              <div class="reservation-detail">
+                <strong>Arrival</strong>
+                <span>Walk-ins welcome</span>
+              </div>
+            </div>
+
+            <a class="button button-primary" href="tel:+16199051236">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M7.2 3.5 9.6 3a1.4 1.4 0 0 1 1.6.8l1.2 2.8a1.4 1.4 0 0 1-.4 1.6l-1.5 1.3a14.8 14.8 0 0 0 4 4l1.3-1.5a1.4 1.4 0 0 1 1.6-.4l2.8 1.2a1.4 1.4 0 0 1 .8 1.6l-.5 2.4a3 3 0 0 1-3 2.4C10.5 18.6 5.4 13.5 4.8 6.5a3 3 0 0 1 2.4-3Z"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              Call to Book
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
          FAQ
     ====================================================== -->
 
@@ -3520,7 +3381,6 @@
               aria-controls="faq-answer-1"
             >
               <span>How early should I arrive?</span>
-
               <span class="faq-icon" aria-hidden="true"></span>
             </button>
 
@@ -3546,7 +3406,6 @@
               aria-controls="faq-answer-2"
             >
               <span>Can I get a massage if I have an injury?</span>
-
               <span class="faq-icon" aria-hidden="true"></span>
             </button>
 
@@ -3572,7 +3431,6 @@
               aria-controls="faq-answer-3"
             >
               <span>What is your cancellation policy?</span>
-
               <span class="faq-icon" aria-hidden="true"></span>
             </button>
 
@@ -3597,7 +3455,6 @@
               aria-controls="faq-answer-4"
             >
               <span>Is there parking available?</span>
-
               <span class="faq-icon" aria-hidden="true"></span>
             </button>
 
@@ -3618,7 +3475,7 @@
     </section>
 
     <!-- =====================================================
-         CONTACT & LOCATION
+         CONTACT
     ====================================================== -->
 
     <section
@@ -3803,9 +3660,9 @@
           <a href="#about">About</a>
           <a href="#services">Services & Pricing</a>
           <a href="#experience">Experience</a>
-          <a href="#booking">Booking</a>
           <a href="#reviews">Reviews</a>
           <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
         </nav>
       </div>
 
@@ -3845,8 +3702,6 @@
       </span>
     </div>
   </footer>
-
-  <!-- Floating call button -->
 
   <a
     class="floating-call"
@@ -3928,7 +3783,7 @@
     });
 
     /* =========================================================
-       3. HERO BACKGROUND CAROUSEL
+       3. HERO CAROUSEL
     ========================================================= */
 
     const heroSlides = [
@@ -3984,7 +3839,7 @@
     startHeroCarousel();
 
     /* =========================================================
-       4. SERVICE IMAGE CAROUSELS
+       4. SERVICE CAROUSELS
     ========================================================= */
 
     const serviceCarousels =
@@ -4034,37 +3889,7 @@
     });
 
     /* =========================================================
-       5. BOOKING FORM DISPLAY
-    ========================================================= */
-
-    const bookingForm =
-      document.getElementById("bookingForm");
-
-    const formStatus =
-      document.getElementById("formStatus");
-
-    bookingForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-
-      const guestName =
-        document.getElementById("guestName").value.trim();
-
-      const selectedService =
-        document.getElementById("serviceChoice").value;
-
-      if (!guestName || !selectedService) {
-        formStatus.textContent =
-          "Please enter your name and select a service.";
-
-        return;
-      }
-
-      formStatus.textContent =
-        "Your request has been prepared. Please call (619) 905-1236 to confirm availability and complete your reservation.";
-    });
-
-    /* =========================================================
-       6. ACCESSIBLE FAQ ACCORDION
+       5. FAQ ACCORDION
     ========================================================= */
 
     const faqButtons =
@@ -4102,7 +3927,7 @@
     });
 
     /* =========================================================
-       7. SCROLL REVEAL
+       6. SCROLL REVEAL
     ========================================================= */
 
     const revealElements =
@@ -4135,7 +3960,7 @@
     }
 
     /* =========================================================
-       8. ACTIVE DESKTOP NAVIGATION
+       7. ACTIVE DESKTOP NAVIGATION
     ========================================================= */
 
     const pageSections =
@@ -4176,7 +4001,7 @@
     }
 
     /* =========================================================
-       9. FOOTER YEAR
+       8. FOOTER YEAR
     ========================================================= */
 
     document.getElementById("currentYear").textContent =
