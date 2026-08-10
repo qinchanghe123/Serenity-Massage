@@ -296,52 +296,19 @@
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 13px;
       flex-shrink: 0;
     }
 
-    .brand-mark {
-      width: 40px;
-      height: 40px;
-      position: relative;
-      display: grid;
-      place-items: center;
-      border: 1px solid rgba(234, 216, 175, 0.54);
-      border-radius: 50%;
+    .brand-logo {
+      width: auto;
+      height: 58px;
+      max-width: min(340px, 52vw);
+      object-fit: contain;
     }
 
-    .brand-mark::before,
-    .brand-mark::after {
-      position: absolute;
-      width: 12px;
-      height: 22px;
-      border: 1px solid var(--gold-light);
-      border-radius: 100% 0 100% 0;
-      content: "";
-      transform: rotate(45deg);
-    }
-
-    .brand-mark::after {
-      transform: rotate(225deg);
-    }
-
-    .brand-name {
-      display: block;
-      font-family: var(--serif);
-      font-size: 1.52rem;
-      font-weight: 600;
-      letter-spacing: 0.015em;
-      line-height: 1;
-    }
-
-    .brand-subtitle {
-      display: block;
-      margin-top: 5px;
-      color: rgba(255, 255, 255, 0.68);
-      font-size: 0.59rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
+    .footer-brand .brand-logo {
+      height: 64px;
+      max-width: min(380px, 80vw);
     }
 
     .desktop-nav {
@@ -995,6 +962,57 @@
       color: var(--muted);
       border-left: 1px solid var(--gold);
       font-size: 0.83rem;
+    }
+
+    .service-perk-banner {
+      width: fit-content;
+      max-width: 100%;
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
+      color: var(--forest);
+      border: 1px solid rgba(200, 169, 107, 0.42);
+      border-radius: var(--radius-md);
+      background: rgba(255, 253, 248, 0.82);
+      box-shadow: 0 10px 28px rgba(11, 30, 24, 0.06);
+    }
+
+    .service-perk-icon {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      color: var(--forest);
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+    }
+
+    .service-perk-icon svg {
+      width: 19px;
+      height: 19px;
+    }
+
+    .service-perk-copy {
+      min-width: 0;
+    }
+
+    .service-perk-copy strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 1.28rem;
+      line-height: 1;
+    }
+
+    .service-perk-copy span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.035em;
     }
 
     .walk-in-banner {
@@ -2010,17 +2028,14 @@
         padding: 78px 0;
       }
 
-      .brand-mark {
-        width: 36px;
-        height: 36px;
+      .brand-logo {
+        height: 46px;
+        max-width: min(270px, 68vw);
       }
 
-      .brand-name {
-        font-size: 1.3rem;
-      }
-
-      .brand-subtitle {
-        font-size: 0.52rem;
+      .footer-brand .brand-logo {
+        height: 54px;
+        max-width: min(300px, 82vw);
       }
 
       .hero-content {
@@ -2249,12 +2264,11 @@
   <header class="site-header" id="siteHeader">
     <div class="container nav-wrap">
       <a class="brand" href="#home" aria-label="Serenity Massage home">
-        <span class="brand-mark" aria-hidden="true"></span>
-
-        <span>
-          <span class="brand-name">Serenity Massage</span>
-          <span class="brand-subtitle">Santee, California</span>
-        </span>
+        <img
+          class="brand-logo"
+          src="logo.png"
+          alt="Serenity Massage"
+        />
       </a>
 
       <nav class="desktop-nav" aria-label="Primary navigation">
@@ -2702,6 +2716,33 @@
             Call to Book
           </a>
         </article>
+
+        <div
+          class="service-perk-banner reveal"
+          role="note"
+          aria-label="Free hot stone included"
+        >
+          <span class="service-perk-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M7.2 16.8c-1.7-1.1-2.7-2.8-2.7-4.8 0-3.5 3.4-6.3 7.5-6.3s7.5 2.8 7.5 6.3c0 2-1 3.7-2.7 4.8-1.4.9-3 1.5-4.8 1.5s-3.4-.6-4.8-1.5Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <path
+                d="M9.2 9.4c.8-.7 1.8-1 2.8-1 1.1 0 2.1.3 2.8 1"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </span>
+
+          <div class="service-perk-copy">
+            <strong>Free Hot Stone</strong>
+            <span>Complimentary hot stone with massage service.</span>
+          </div>
+        </div>
 
         <div class="service-grid">
           <!-- BODY MASSAGE -->
@@ -3639,12 +3680,11 @@
           href="#home"
           aria-label="Serenity Massage home"
         >
-          <span class="brand-mark" aria-hidden="true"></span>
-
-          <span>
-            <span class="brand-name">Serenity Massage</span>
-            <span class="brand-subtitle">Santee, California</span>
-          </span>
+          <img
+            class="brand-logo"
+            src="logo.png"
+            alt="Serenity Massage"
+          />
         </a>
 
         <p>
